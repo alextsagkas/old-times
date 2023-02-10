@@ -2,8 +2,11 @@ import { type NextPage } from "next";
 import Head from "next/head";
 
 import { menu as menu } from "../../data/menu";
+import { bruschetta} from "../../data/menu";
+
 import Footnote from "./Footnote";
 import Introduction from "./Introduction";
+import Menu from "./Menu";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +34,7 @@ const Home: NextPage = () => {
           subtitle={menu.subtitle}
           description={menu.description}
         />
+        <Menu bruschetta={bruschetta}/>
         <Footnote
           facebookURL={menu.facebook}
           tripadvisorURL={menu.tripadvisor}

@@ -1,27 +1,10 @@
-// Menu Infos
+import {
+  menuInterface,
+  menuCategoryInterface,
+  menuWineCategoryInterface,
+} from "../types/types";
 
-interface menuInterface {
-  title: string;
-  subtitle: string;
-  road: string;
-  telephone: string;
-  facebook: string;
-  tripadvisor: string;
-  description: string;
-  foodDetails: {
-    greek: string[];
-    english: string[];
-  };
-  foodInfos: {
-    greek: string[];
-    english: string[];
-  };
-  restaurantInfos: {
-    greek: string[];
-    english: string[];
-  };
-  footnote: string[];
-}
+// Menu Infos
 
 export const menu: menuInterface = {
   title: "OLD TIMES",
@@ -70,20 +53,7 @@ export const menu: menuInterface = {
 
 // Menu Categories
 
-interface menuCategoryInterface {
-  category: string;
-  fresh: number;
-  items: menuItemInterface[];
-}
-
-interface menuItemInterface {
-  name: string;
-  description: string;
-  fresh: number;
-  price: number;
-}
-
-export const bruscheta: menuCategoryInterface = {
+export const bruschetta: menuCategoryInterface = {
   category: "Bruschetta",
   fresh: 0,
   items: [
@@ -308,29 +278,6 @@ export const cocktails: menuCategoryInterface = {
     },
   ],
 };
-
-interface menuWineCategoryInterface {
-  category: string;
-  fresh: number;
-  items: {
-    white: {
-      category: string;
-      items: menuItemInterface[];
-    };
-    red: {
-      category: string;
-      items: menuItemInterface[];
-    };
-    rose: {
-      category: string;
-      items: menuItemInterface[];
-    };
-    sparkling: {
-      category: string;
-      items: menuItemInterface[];
-    };
-  };
-}
 
 export const wines: menuWineCategoryInterface = {
   category: "Wines List",

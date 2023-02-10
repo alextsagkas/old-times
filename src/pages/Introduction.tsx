@@ -1,12 +1,7 @@
 import Image from "next/image";
 
 import PageComponent from "./PageComponent";
-
-interface IntroductionProps {
-  title: string;
-  subtitle: string;
-  description: string;
-}
+import {IntroductionProps} from "../../types/types";
 
 const Introduction = ({ title, subtitle, description }: IntroductionProps) => {
   return (
@@ -20,7 +15,7 @@ const Introduction = ({ title, subtitle, description }: IntroductionProps) => {
           className={"mx-auto"}
         />
         <div>
-          <h1 className="pt-6 font-libreCalsonText text-4xl font-bold text-primary">
+          <h1 className="pt-6 font-libreCalsonText text-5xl font-md text-primary">
             {title}
           </h1>
           <h2 className="pt-6 text-xl text-primary"> {subtitle}</h2>
