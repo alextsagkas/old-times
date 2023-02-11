@@ -26,6 +26,7 @@ import {
 import FoodDetails from "./FoodDetails";
 
 import Footnote from "./Footnote";
+import Infos from "./Infos";
 import Introduction from "./Introduction";
 import MenuDessertItem from "./MenuDessertItem";
 import MenuItem from "./MenuItem";
@@ -77,6 +78,7 @@ const Home: NextPage = () => {
         <MenuWineItem menuItem={wines} />
         <MenuItem menuItem={cocktails} />
         <MenuItem menuItem={liquers} />
+        <Infos foodInfos={menu.foodInfos} restaurantInfos={menu.restaurantInfos} footnote={menu.footnote}/>
         <Footnote
           facebookURL={menu.facebook}
           tripadvisorURL={menu.tripadvisor}

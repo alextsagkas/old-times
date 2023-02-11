@@ -2,11 +2,12 @@ import Image from "next/image";
 
 import PageComponent from "../helperComponents/PageComponent";
 import { IntroductionProps } from "../../types/types";
+import Separator from "../helperComponents/Separator";
 
 const Introduction = ({ title, subtitle, description }: IntroductionProps) => {
   return (
     <PageComponent>
-      <div className="py-10">
+      <div className="pt-10">
         <Image
           width={200}
           height={200}
@@ -19,8 +20,9 @@ const Introduction = ({ title, subtitle, description }: IntroductionProps) => {
             {title}
           </h1>
           <h2 className="pt-6 text-xl text-primary"> {subtitle}</h2>
-          <h3 className="pt-6 text-sm text-primary">{description}</h3>
+          <h3 className="py-6 text-sm text-primary">{description}</h3>
         </div>
+        <Separator />
       </div>
     </PageComponent>
   );
