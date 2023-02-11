@@ -12,11 +12,11 @@ const MenuItemMap = ({ menuItem }: MenuItemMapProps) => {
         return (
           <div
             key={item.name}
-            className="flex flex-row items-start justify-between gap-10 xs:gap-20"
+            className="flex flex-row  justify-between items-start gap-10 xs:gap-20"
           >
             <div className="flex flex-col items-start gap-1">
-              <div className="flex flex-row items-center gap-2">
-                <h2 className="font-merriweather text-xs font-bold">
+              <div className="flex flex-row gap-2">
+                <h2 className="text-left font-merriweather text-xs font-bold">
                   {item.name}
                 </h2>
                 {item.fresh === 1 && (

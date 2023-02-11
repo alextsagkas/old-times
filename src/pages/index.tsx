@@ -80,6 +80,7 @@ const Home: NextPage = () => {
         />
         <Separator />
         <InfosFootnote footnote={menu.footnote} />
+        <Separator />
         <Footnote
           facebookURL={menu.facebook}
           tripadvisorURL={menu.tripadvisor}
