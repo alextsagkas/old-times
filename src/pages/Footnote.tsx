@@ -2,7 +2,7 @@ import Image from "next/image";
 import MapPin from "../../icons/MapPin";
 import Phone from "../../icons/Phone";
 
-import PageComponent from "./PageComponent";
+import PageComponent from "../helperComponents/PageComponent";
 import { FootnoteProps } from "../../types/types";
 
 function Footnote({

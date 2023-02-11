@@ -1,6 +1,6 @@
 import MenuDessertItemMap from "../helperComponents/MenuDessertItemMap";
 import MenuTitle from "../helperComponents/MenuTitle";
-import PageComponent from "./PageComponent";
+import PageComponent from "../helperComponents/PageComponent";
 
 import { menuDessertCategoryInterface } from "../../types/types";
 

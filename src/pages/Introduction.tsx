@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-import PageComponent from "./PageComponent";
-import {IntroductionProps} from "../../types/types";
+import PageComponent from "../helperComponents/PageComponent";
+import { IntroductionProps } from "../../types/types";
 
 const Introduction = ({ title, subtitle, description }: IntroductionProps) => {
   return (
     <PageComponent>
-      <div>
+      <div className="py-10">
         <Image
           width={200}
           height={200}
@@ -15,7 +15,7 @@ const Introduction = ({ title, subtitle, description }: IntroductionProps) => {
           className={"mx-auto"}
         />
         <div>
-          <h1 className="pt-6 font-libreCalsonText text-5xl font-md text-primary">
+          <h1 className="font-md pt-6 font-libreCalsonText text-5xl text-primary">
             {title}
           </h1>
           <h2 className="pt-6 text-xl text-primary"> {subtitle}</h2>

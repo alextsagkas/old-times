@@ -2,7 +2,7 @@ import { menuCategoryInterface } from "../../types/types";
 
 import MenuItemMap from "../helperComponents/MenuItemMap";
 import MenuTitle from "../helperComponents/MenuTitle";
-import PageComponent from "./PageComponent";
+import PageComponent from "../helperComponents/PageComponent";
 
 interface menuProps {
   menuItem: menuCategoryInterface;

@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <main className="flex flex-col gap-4 bg-orange-100 pt-4 text-center">
+      <main className="flex flex-col gap-4 bg-orange-100 text-center">
         <Introduction
           title={menu.title}
           subtitle={menu.subtitle}

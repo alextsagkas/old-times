@@ -1,5 +1,5 @@
 import Separator from "../helperComponents/Separator";
-import PageComponent from "./PageComponent";
+import PageComponent from "../helperComponents/PageComponent";
 
 interface FoodDetailsProps {
   foodDetails: {
