@@ -295,7 +295,7 @@ export const wines: menuWineCategoryInterface = {
           price: 5.9,
         },
         {
-          name: "Papaioannou",
+          name: "Papaioannou ",
           description: "Chardonnay",
           fresh: 0,
           price: 23.0,
@@ -415,7 +415,7 @@ export const wines: menuWineCategoryInterface = {
           price: 100.0,
         },
         {
-          name: "Moët Chandon",
+          name: "Moët Chandon ",
           description: "Ice Imperial",
           fresh: 0,
           price: 130.0,
@@ -484,13 +484,13 @@ export const coffee: menuCategoryInterface = {
       price: 3.5,
     },
     {
-      name: "Irish coffe",
+      name: "Irish coffee",
       description: "",
       fresh: 0,
       price: 6.0,
     },
     {
-      name: "Greek coffe",
+      name: "Greek coffee",
       description: "",
       fresh: 0,
       price: 2.3,
@@ -530,12 +530,6 @@ export const coffee: menuCategoryInterface = {
       description: "",
       fresh: 0,
       price: 3.7,
-    },
-    {
-      name: "Greek coffe",
-      description: "",
-      fresh: 0,
-      price: 2.3,
     },
   ],
 };
@@ -665,12 +659,6 @@ export const softDrinks: menuCategoryInterface = {
       description: "",
       fresh: 0,
       price: 3.5,
-    },
-    {
-      name: "Coca-cola (zero/normal)",
-      description: "",
-      fresh: 0,
-      price: 2.9,
     },
     {
       name: "Tonic water",

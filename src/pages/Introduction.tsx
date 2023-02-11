@@ -12,7 +12,8 @@ const Introduction = ({ title, subtitle, description }: IntroductionProps) => {
           height={200}
           src={"/old_times_transparent.png"}
           alt="Picture of the author"
-          className={"mx-auto"}
+          className={"mx-auto h-auto w-auto"}
+          priority={true}
         />
         <div>
           <h1 className="font-md pt-6 font-libreCalsonText text-5xl text-primary">

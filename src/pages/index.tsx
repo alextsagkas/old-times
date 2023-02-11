@@ -43,16 +43,6 @@ const Home: NextPage = () => {
           name="description"
           content="Old times, Greece, Corfu town restaurant"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Merriweather:wght@300;400;700&family=Vujahday+Script&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <main className="flex flex-col gap-8 bg-orange-100 text-center">
         <Introduction
@@ -60,7 +50,7 @@ const Home: NextPage = () => {
           subtitle={menu.subtitle}
           description={menu.description}
         />
-        <Separator/>
+        <Separator />
         <MenuItem menuItem={bruschetta} />
         <MenuItem menuItem={greekDips} />
         <MenuItem menuItem={appetizers} />
@@ -73,9 +63,9 @@ const Home: NextPage = () => {
         <MenuItem menuItem={iceCreamMilkShake} />
         <MenuItem menuItem={fruits} />
         <MenuDessertItem menuItem={desserts} />
-        <Separator/>
+        <Separator />
         <FoodDetails foodDetails={menu.foodDetails} />
-        <Separator/>
+        <Separator />
         <MenuItem menuItem={softDrinks} />
         <MenuItem menuItem={beers} />
         <MenuItem menuItem={spirits} />
@@ -83,12 +73,12 @@ const Home: NextPage = () => {
         <MenuWineItem menuItem={wines} />
         <MenuItem menuItem={cocktails} />
         <MenuItem menuItem={liquers} />
-        <Separator/>
+        <Separator />
         <Infos
           foodInfos={menu.foodInfos}
           restaurantInfos={menu.restaurantInfos}
         />
-        <Separator/>
+        <Separator />
         <InfosFootnote footnote={menu.footnote} />
         <Footnote
           facebookURL={menu.facebook}
