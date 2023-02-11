@@ -22,10 +22,18 @@ export interface menuInterface {
 }
 
 export interface menuItemInterface {
-name: string;
-description: string;
-fresh: number;
-price: number;
+  name: string;
+  description: string;
+  fresh: number;
+  price: number;
+}
+
+export interface menuDessertItemInterface {
+  name: string;
+  description: string;
+  fresh: number;
+  price: number;
+  items: menuItemInterface[];
 }
 
 export interface menuCategoryInterface {
@@ -34,24 +42,33 @@ export interface menuCategoryInterface {
   items: menuItemInterface[];
 }
 
+export interface menuDessertCategoryInterface {
+  category: string;
+  fresh: number;
+  items: menuDessertItemInterface[];
+}
 export interface menuWineCategoryInterface {
   category: string;
   fresh: number;
   items: {
     white: {
       category: string;
+      fresh: number;
       items: menuItemInterface[];
     };
     red: {
       category: string;
+      fresh: number;
       items: menuItemInterface[];
     };
     rose: {
       category: string;
+      fresh: number;
       items: menuItemInterface[];
     };
     sparkling: {
       category: string;
+      fresh: number;
       items: menuItemInterface[];
     };
   };

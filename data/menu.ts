@@ -2,6 +2,7 @@ import {
   menuInterface,
   menuCategoryInterface,
   menuWineCategoryInterface,
+  menuDessertCategoryInterface,
 } from "../types/types";
 
 // Menu Infos
@@ -280,11 +281,12 @@ export const cocktails: menuCategoryInterface = {
 };
 
 export const wines: menuWineCategoryInterface = {
-  category: "Wines List",
+  category: "Wine List",
   fresh: 0,
   items: {
     white: {
       category: "White wine",
+      fresh: 0,
       items: [
         {
           name: "Glass of white",
@@ -326,6 +328,7 @@ export const wines: menuWineCategoryInterface = {
     },
     red: {
       category: "Red wine",
+      fresh: 0,
       items: [
         {
           name: "Glass of red",
@@ -361,6 +364,7 @@ export const wines: menuWineCategoryInterface = {
     },
     rose: {
       category: "Rosé wine",
+      fresh: 0,
       items: [
         {
           name: "Glass of rosé",
@@ -390,6 +394,7 @@ export const wines: menuWineCategoryInterface = {
     },
     sparkling: {
       category: "Sparkling wine",
+      fresh: 0,
       items: [
         {
           name: "Gancio Prosecco",
@@ -712,7 +717,7 @@ export const softDrinks: menuCategoryInterface = {
   ],
 };
 
-export const desserts: menuCategoryInterface = {
+export const desserts: menuDessertCategoryInterface = {
   category: "Desserts",
   fresh: 0,
   items: [
@@ -721,42 +726,46 @@ export const desserts: menuCategoryInterface = {
       description: "layered pastry filled with chopped nuts and simple syrup",
       fresh: 0,
       price: 4.5,
+      items: [],
     },
     {
       name: "Apple pie",
       description: "",
       fresh: 0,
       price: 4.5,
+      items: [],
     },
     {
       name: "Yoghurt salads",
       description: "create your own yoghurt salad",
       fresh: 0,
       price: 4.0,
-    },
-    {
-      name: "With honey and walnuts",
-      description: "",
-      fresh: 0,
-      price: 2.0,
-    },
-    {
-      name: "With muesli and walnuts",
-      description: "",
-      fresh: 0,
-      price: 2.0,
-    },
-    {
-      name: "With fresh fruit",
-      description: "",
-      fresh: 0,
-      price: 2.0,
-    },
-    {
-      name: "Added ice-cream scoop",
-      description: "",
-      fresh: 0,
-      price: 2.0,
+      items: [
+        {
+          name: "With honey and walnuts",
+          description: "",
+          fresh: 0,
+          price: 2.0,
+        },
+        {
+          name: "With muesli and walnuts",
+          description: "",
+          fresh: 0,
+          price: 2.0,
+        },
+        {
+          name: "With fresh fruit",
+          description: "",
+          fresh: 0,
+          price: 2.0,
+        },
+        {
+          name: "Added ice-cream scoop",
+          description: "",
+          fresh: 0,
+          price: 2.0,
+        },
+      ],
     },
   ],
 };
@@ -1017,7 +1026,7 @@ export const grilled: menuCategoryInterface = {
   ],
 };
 
-export const seeFood: menuCategoryInterface = {
+export const seaFood: menuCategoryInterface = {
   category: "Seafood",
   fresh: 0,
   items: [

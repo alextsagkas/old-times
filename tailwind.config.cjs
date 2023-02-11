@@ -11,6 +11,9 @@ module.exports = {
         libreCalsonText: ["Libre Calson Text", "serif"],
         vujahddayScript: ["Vujahdday Script", "cursive"],
       },
+      screens: {
+        xs: "500px",
+      },
     },
   },
   plugins: [],

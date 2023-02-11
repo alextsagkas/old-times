@@ -12,7 +12,7 @@ function Footnote({
   telephone,
 }: FootnoteProps) {
   return (
-    <div className="border-t-2 border-primary py-4">
+    <div className="mt-10 border-t-2 border-primary py-4">
       <PageComponent>
         <div className="flex flex-row justify-between text-xs">
           <div className="flex flex-col gap-1">
