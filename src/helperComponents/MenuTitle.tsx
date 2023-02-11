@@ -11,7 +11,7 @@ interface MenuTitleProps {
 
 const MenuTitle = ({ menuItem }: MenuTitleProps) => {
   return (
-    <div className="flex flex-row items-center">
+    <div className="flex flex-row items-center mb-4">
       <h1 className="mr-2 font-vujahddayScript text-2xl font-bold text-primary">
         {menuItem.category}
       </h1>

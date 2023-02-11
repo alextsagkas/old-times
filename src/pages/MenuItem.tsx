@@ -11,7 +11,7 @@ interface menuProps {
 function MenuItem({ menuItem }: menuProps) {
   return (
     <PageComponent>
-      <div className="mt-6">
+      <div>
         <MenuTitle menuItem={menuItem} />
         <MenuItemMap menuItem={menuItem} />
       </div>

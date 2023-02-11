@@ -23,10 +23,12 @@ import {
   liquers,
   wines,
 } from "../../data/menu";
-import FoodDetails from "./FoodDetails";
 
+import Separator from "../helperComponents/Separator";
+import FoodDetails from "./FoodDetails";
 import Footnote from "./Footnote";
 import Infos from "./Infos";
+import InfosFootnote from "./InfosFootnote";
 import Introduction from "./Introduction";
 import MenuDessertItem from "./MenuDessertItem";
 import MenuItem from "./MenuItem";
@@ -52,12 +54,13 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <main className="flex flex-col gap-4 bg-orange-100 text-center">
+      <main className="flex flex-col gap-8 bg-orange-100 text-center">
         <Introduction
           title={menu.title}
           subtitle={menu.subtitle}
           description={menu.description}
         />
+        <Separator/>
         <MenuItem menuItem={bruschetta} />
         <MenuItem menuItem={greekDips} />
         <MenuItem menuItem={appetizers} />
@@ -70,7 +73,9 @@ const Home: NextPage = () => {
         <MenuItem menuItem={iceCreamMilkShake} />
         <MenuItem menuItem={fruits} />
         <MenuDessertItem menuItem={desserts} />
+        <Separator/>
         <FoodDetails foodDetails={menu.foodDetails} />
+        <Separator/>
         <MenuItem menuItem={softDrinks} />
         <MenuItem menuItem={beers} />
         <MenuItem menuItem={spirits} />
@@ -78,7 +83,13 @@ const Home: NextPage = () => {
         <MenuWineItem menuItem={wines} />
         <MenuItem menuItem={cocktails} />
         <MenuItem menuItem={liquers} />
-        <Infos foodInfos={menu.foodInfos} restaurantInfos={menu.restaurantInfos} footnote={menu.footnote}/>
+        <Separator/>
+        <Infos
+          foodInfos={menu.foodInfos}
+          restaurantInfos={menu.restaurantInfos}
+        />
+        <Separator/>
+        <InfosFootnote footnote={menu.footnote} />
         <Footnote
           facebookURL={menu.facebook}
           tripadvisorURL={menu.tripadvisor}

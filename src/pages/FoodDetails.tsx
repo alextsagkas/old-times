@@ -9,8 +9,6 @@ interface FoodDetailsProps {
 }
 const FoodDetails = function ({ foodDetails }: FoodDetailsProps) {
   return (
-    <>
-      <Separator />
       <PageComponent>
         <div className="flex flex-col gap-3 font-serif text-xs font-thin">
           <ul className="flex list-disc flex-col gap-1 text-left">
@@ -25,8 +23,6 @@ const FoodDetails = function ({ foodDetails }: FoodDetailsProps) {
           </ul>
         </div>
       </PageComponent>
-      <Separator />
-    </>
   );
 };
 

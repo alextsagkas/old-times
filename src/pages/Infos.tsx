@@ -1,5 +1,4 @@
 import PageComponent from "../helperComponents/PageComponent";
-import Separator from "../helperComponents/Separator";
 
 interface InfosProps {
   foodInfos: {
@@ -10,14 +9,13 @@ interface InfosProps {
     greek: string[];
     english: string[];
   };
-  footnote: string[];
 }
-const Infos = ({ foodInfos, restaurantInfos, footnote }: InfosProps) => {
+
+const Infos = ({ foodInfos, restaurantInfos }: InfosProps) => {
   return (
     <PageComponent>
       <>
-        <Separator />
-        <div className="flex flex-col gap-3 font-serif text-xs font-thin">
+        <div className="flex flex-col gap-4 font-serif text-xs font-thin">
           <ul className="flex list-none flex-col gap-1 text-left">
             {foodInfos.greek.map((greekItem) => (
               <li key={greekItem}>{greekItem}</li>
@@ -26,7 +24,7 @@ const Infos = ({ foodInfos, restaurantInfos, footnote }: InfosProps) => {
               <li key={englishItem}>{englishItem}</li>
             ))}
           </ul>
-          <ul className="mt-4 flex list-none flex-col gap-1 text-left">
+          <ul className="flex list-none flex-col gap-1 text-left">
             {restaurantInfos.greek.map((greekItem) => (
               <li key={greekItem}>{greekItem}</li>
             ))}
@@ -35,12 +33,6 @@ const Infos = ({ foodInfos, restaurantInfos, footnote }: InfosProps) => {
             ))}
           </ul>
         </div>
-        <Separator />
-        <ul className="mt-4 font-merriweather text-xs flex list-none flex-col gap-1 text-left">
-          {footnote.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
       </>
     </PageComponent>
   );

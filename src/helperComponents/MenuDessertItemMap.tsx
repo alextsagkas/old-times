@@ -8,12 +8,12 @@ interface MenuDessertItemMapProps {
 
 const MenuDessertItemMap = ({ menuItem }: MenuDessertItemMapProps) => {
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       {menuItem.items.map((item) => {
         return (
           <div
             key={item.name}
-            className="mt-4 flex flex-row items-start justify-between gap-10 xs:gap-20"
+            className="flex flex-row items-start justify-between gap-10 xs:gap-20"
           >
             <div className="flex flex-col items-start gap-1">
               <div className="flex flex-row items-center gap-2">
