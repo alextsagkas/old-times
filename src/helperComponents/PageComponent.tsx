@@ -1,7 +1,11 @@
 import { PageComponentProps } from "../../types/types";
 
 const PageComponent = ({ children }: PageComponentProps) => {
-  return <section className="max-w-2xl sm:w-9/12 sm:mx-auto min-[400px]:px-10 px-6">{children}</section>;
+  return (
+    <section className="h-fit min-w-[320px] max-w-3xl px-6 min-[400px]:px-10 sm:mx-auto sm:w-9/12">
+      {children}
+    </section>
+  );
 };
 
 export default PageComponent;

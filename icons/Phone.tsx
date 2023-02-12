@@ -7,7 +7,7 @@ const Phone: NextPage = () => {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={2.2}
-      stroke="currentColor"
+      stroke="#1E445B"
       className="h-4 w-4"
     >
       <path

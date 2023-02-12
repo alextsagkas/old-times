@@ -105,16 +105,11 @@ export const greekDips: menuCategoryInterface = {
       price: 4.9,
     },
     {
-      name: "Tirokafteri",
-      description: "spicy cheese dip",
-      fresh: 1,
-      price: 3.9,
-    },
-    {
-      name: "Olives",
-      description: "",
-      fresh: 2,
-      price: 3.9,
+      name: "Meze for 2 people",
+      description:
+        "tzatziki, hummus, tirokafteri, spinach pie, grilled vegetables, pita bread",
+      fresh: 0,
+      price: 24.0,
     },
     {
       name: "Hummus",
@@ -130,11 +125,16 @@ export const greekDips: menuCategoryInterface = {
       price: 5.9,
     },
     {
-      name: "Meze for 2 people",
-      description:
-        "tzatziki, hummus, tirokafteri, spinach pie, grilled vegetables, pita bread",
-      fresh: 0,
-      price: 24.0,
+      name: "Olives",
+      description: "",
+      fresh: 2,
+      price: 3.9,
+    },
+    {
+      name: "Tirokafteri",
+      description: "spicy cheese dip",
+      fresh: 1,
+      price: 3.9,
     },
   ],
 };
@@ -289,12 +289,6 @@ export const wines: menuWineCategoryInterface = {
       fresh: 0,
       items: [
         {
-          name: "Glass of white",
-          description: "",
-          fresh: 0,
-          price: 5.9,
-        },
-        {
           name: "Papaioannou ",
           description: "Chardonnay",
           fresh: 0,
@@ -323,6 +317,12 @@ export const wines: menuWineCategoryInterface = {
           description: "Robola, Kakotrigis (bio, local)",
           fresh: 0,
           price: 23.0,
+        },
+        {
+          name: "Glass of white",
+          description: "",
+          fresh: 0,
+          price: 5.9,
         },
       ],
     },
@@ -539,12 +539,6 @@ export const spirits: menuCategoryInterface = {
   fresh: 0,
   items: [
     {
-      name: "Ouzo",
-      description: "Glass, Carafe",
-      fresh: 0,
-      price: 0,
-    },
-    {
       name: "Tsipouro Glass",
       description: "",
       fresh: 0,
@@ -597,6 +591,12 @@ export const spirits: menuCategoryInterface = {
       description: "",
       fresh: 0,
       price: 7.0,
+    },
+    {
+      name: "Ouzo",
+      description: "Glass, Carafe",
+      fresh: 0,
+      price: 0,
     },
   ],
 };
@@ -859,12 +859,6 @@ export const pasta: menuCategoryInterface = {
       price: 9.9,
     },
     {
-      name: "Carbonara",
-      description: "",
-      fresh: 0,
-      price: 9.9,
-    },
-    {
       name: "4 Chesses",
       description:
         "mozzarella, parmesan, gorgonzola, gouda and fresh cherry tomatoes",
@@ -903,6 +897,12 @@ export const pasta: menuCategoryInterface = {
       description: "feta sauce, fresh spring onion and anise",
       fresh: 1,
       price: 12.5,
+    },
+    {
+      name: "Carbonara",
+      description: "",
+      fresh: 0,
+      price: 9.9,
     },
     {
       name: "Shrimp risotto",

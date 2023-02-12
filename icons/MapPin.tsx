@@ -7,7 +7,7 @@ const MapPin: NextPage = () => {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={2.2}
-      stroke="red"
+      stroke="#1E445B"
       className="h-4 w-4"
     >
       <path

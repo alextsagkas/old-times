@@ -7,8 +7,8 @@ interface MenuWineItemMapProps {
 
 const MenuWineItemMap = ({ menuItem }: MenuWineItemMapProps) => {
   return (
-    <div className="flex flex-col mt-4">
-      <h2 className="text-center font-merriweather text-lg font-bold text-primary">
+    <div className="mt-4 flex flex-col md:mt-6">
+      <h2 className="mb-2 text-center font-merriweather text-lg font-bold text-primary md:mb-4">
         {menuItem.category}
       </h2>
       <MenuItemMap menuItem={menuItem} />

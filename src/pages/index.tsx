@@ -44,7 +44,7 @@ const Home: NextPage = () => {
           content="Old times, Greece, Corfu town restaurant"
         />
       </Head>
-      <main className="flex flex-col gap-8 bg-orange-100 text-center">
+      <main className="flex flex-col gap-8 md:gap-12 bg-orange-100 text-center">
         <Introduction
           title={menu.title}
           subtitle={menu.subtitle}

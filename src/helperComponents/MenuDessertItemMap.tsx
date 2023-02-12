@@ -8,12 +8,12 @@ interface MenuDessertItemMapProps {
 
 const MenuDessertItemMap = ({ menuItem }: MenuDessertItemMapProps) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-y-3 md:gap-x-8">
       {menuItem.items.map((item) => {
         return (
           <div
             key={item.name}
-            className="flex flex-row items-start justify-between gap-10 xs:gap-20"
+            className="flex flex-row items-start justify-between gap-10 xs:gap-20 min-[750px]:gap-4 md:gap-10"
           >
             <div className="flex flex-col items-start gap-1">
               <div className="flex flex-row items-center gap-2">
@@ -54,13 +54,17 @@ const MenuDessertItemMap = ({ menuItem }: MenuDessertItemMapProps) => {
                 </h3>
               )}
               {item.items.length != 0 && (
-                <ul className="ml-3 flex list-disc flex-col gap-1 text-left">
+                <ul className="mt-2 flex flex-col gap-2 text-left">
                   {item.items.map((subItem) => (
                     <li
                       key={subItem.name}
-                      className="font-merriweather text-xs"
+                      className="flex flex-row justify-between gap-3 font-merriweather text-xs"
                     >
-                      {subItem.name} +{subItem.price.toFixed(2)}
+                      <div className="flex flex-row justify-start gap-1">
+                        <div>•</div>
+                        <div className="text-left">{subItem.name}</div>
+                      </div>
+                      <div>+{subItem.price.toFixed(2)}</div>
                     </li>
                   ))}
                 </ul>

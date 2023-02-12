@@ -7,15 +7,15 @@ interface MenuItemMapProps {
 
 const MenuItemMap = ({ menuItem }: MenuItemMapProps) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-y-3 md:gap-x-8">
       {menuItem.items.map((item) => {
         return (
           <div
             key={item.name}
-            className="flex flex-row  justify-between items-start gap-10 xs:gap-20"
+            className="flex flex-row items-start justify-between gap-10 xs:gap-20 min-[750px]:gap-4 md:gap-10"
           >
             <div className="flex flex-col items-start gap-1">
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-2 ">
                 <h2 className="text-left font-merriweather text-xs font-bold">
                   {item.name}
                 </h2>
