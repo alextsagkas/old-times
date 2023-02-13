@@ -25,16 +25,16 @@ import {
   wines,
 } from "../../data/menu";
 
-import Separator from "../helperComponents/Separator";
-import FoodDetails from "./FoodDetails";
-import Footnote from "./Footnote";
-import Infos from "./Infos";
-import InfosFootnote from "./InfosFootnote";
-import Introduction from "./Introduction";
-import MenuDessertItem from "./MenuDessertItem";
-import MenuItem from "./MenuItem";
-import MenuWineItem from "./MenuWineItem";
-import NavBar from "./NavBar";
+import Separator from "../components/Separator";
+import FoodDetails from "../components/FoodDetails";
+import Footnote from "../components/Footnote";
+import Infos from "../components/Infos";
+import InfosFootnote from "../components/InfosFootnote";
+import Introduction from "../components/Introduction";
+import MenuDessertItem from "../components/MenuDessertItem";
+import MenuItem from "../components/MenuItem";
+import MenuWineItem from "../components/MenuWineItem";
+import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
   const IntroRef = createRef<HTMLDivElement>();

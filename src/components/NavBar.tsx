@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import PageComponent from "../helperComponents/PageComponent";
+import PageComponent from "../components/PageComponent";
 import { NavBarProps, RefsItemInterface } from "../../types/types";
 
 const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
@@ -85,17 +85,17 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
               >
                 <div
                   className={`${hamburgerLine} ${
-                    isVisible && "translate-y-[8px] rotate-45"
+                    isVisible ? "translate-y-[8px] rotate-45" : ""
                   }`}
                 />
                 <div
                   className={`${hamburgerLine} ${
-                    isVisible && "origin-center scale-x-0 opacity-0"
+                    isVisible ? "origin-center scale-x-0 opacity-0" : ""
                   }`}
                 />
                 <div
                   className={`${hamburgerLine} ${
-                    isVisible && "-translate-y-[8px] -rotate-45"
+                    isVisible ? "-translate-y-[8px] -rotate-45" : ""
                   }`}
                 />
               </button>
@@ -109,13 +109,13 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         }`}
       >
         <PageComponent>
-          <div className="text-normal grid h-fit grid-cols-2 justify-items-start gap-y-2 py-2 font-vujahddayScript">
+          <div className="grid h-fit grid-cols-2 justify-items-start gap-y-4 py-4 font-vujahddayScript text-lg">
             {refs.map((ref) => {
               if (ref.title !== "Menu") {
                 return (
                   <nav
                     key={ref.title}
-                    className={`w-full cursor-pointer text-orange-100 transition-all duration-100 ease-out ${
+                    className={`w-full cursor-pointer text-center text-orange-100 transition-all duration-100 ease-out ${
                       isVisible ? "opacity-100" : "opacity-0"
                     }`}
                     onClick={(event) => {

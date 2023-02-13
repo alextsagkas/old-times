@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
-import MenuDessertItemMap from "../helperComponents/MenuDessertItemMap";
-import MenuTitle from "../helperComponents/MenuTitle";
-import PageComponent from "../helperComponents/PageComponent";
+import MenuDessertItemMap from "../components/MenuDessertItemMap";
+import MenuTitle from "../components/MenuTitle";
+import PageComponent from "../components/PageComponent";
 
 import { menuDessertCategoryInterface } from "../../types/types";
 
@@ -22,5 +22,7 @@ const MenuDessertItem = forwardRef<HTMLDivElement, MenuProps>(
     );
   }
 );
+
+MenuDessertItem.displayName = "MenuDessertItem";
 
 export default MenuDessertItem;

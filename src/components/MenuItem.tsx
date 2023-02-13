@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
 import { menuCategoryInterface } from "../../types/types";
 
-import MenuItemMap from "../helperComponents/MenuItemMap";
-import MenuTitle from "../helperComponents/MenuTitle";
-import PageComponent from "../helperComponents/PageComponent";
+import MenuItemMap from "../components/MenuItemMap";
+import MenuTitle from "../components/MenuTitle";
+import PageComponent from "../components/PageComponent";
 
 interface MenuProps {
   menuItem: menuCategoryInterface;
@@ -21,5 +21,7 @@ const MenuItem = forwardRef<HTMLDivElement, MenuProps>(
     );
   }
 );
+
+MenuItem.displayName = "MenuItem";
 
 export default MenuItem;

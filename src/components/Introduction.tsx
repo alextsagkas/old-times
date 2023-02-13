@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import Image from "next/image";
 
-import PageComponent from "../helperComponents/PageComponent";
+import PageComponent from "../components/PageComponent";
 import { IntroductionProps } from "../../types/types";
 
 const Introduction = forwardRef<HTMLDivElement, IntroductionProps>(
@@ -32,5 +32,7 @@ const Introduction = forwardRef<HTMLDivElement, IntroductionProps>(
     );
   }
 );
+
+Introduction.displayName = "Introduction";
 
 export default Introduction;
