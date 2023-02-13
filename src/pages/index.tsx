@@ -59,27 +59,27 @@ const Home: NextPage = () => {
   const LiquersRef = createRef<HTMLDivElement>();
 
   const refs = [
-        {ref: IntroRef, title: "Menu"},
-        {ref: BruschettaRef, title: bruschetta.category},
-        {ref: GreekDipsRef, title: greekDips.category},
-        {ref: AppetizersRef, title: appetizers.category},
-        {ref: SaladsRef, title: salads.category},
-        {ref: SeaFoodRef, title: seaFood.category},
-        {ref: GrilledRef, title: grilled.category},
-        {ref: PizzaRef, title: pizza.category},
-        {ref: PastaRef, title: pasta.category},
-        {ref: TraditionalRef, title: traditional.category},
-        {ref: IceCreamMilkShakeRef, title: iceCreamMilkShake.category},
-        {ref: FruitsRef, title: fruits.category},
-        {ref: DessertsRef, title: desserts.category},
-        {ref: SoftDrinksRef, title: softDrinks.category},
-        {ref: BeersRef, title: beers.category},
-        {ref: SpiritsRef, title: spirits.category},
-        {ref: CoffeesRef, title: coffee.category},
-        {ref: WineListRef, title: wines.category},
-        {ref: CocktailsRef, title: cocktails.category},
-        {ref: LiquersRef, title: liquers.category},
-      ]
+    { ref: IntroRef, title: "Menu" },
+    { ref: BruschettaRef, title: bruschetta.category },
+    { ref: GreekDipsRef, title: greekDips.category },
+    { ref: AppetizersRef, title: appetizers.category },
+    { ref: SaladsRef, title: salads.category },
+    { ref: SeaFoodRef, title: seaFood.category },
+    { ref: GrilledRef, title: grilled.category },
+    { ref: PizzaRef, title: pizza.category },
+    { ref: PastaRef, title: pasta.category },
+    { ref: TraditionalRef, title: traditional.category },
+    { ref: IceCreamMilkShakeRef, title: iceCreamMilkShake.category },
+    { ref: FruitsRef, title: fruits.category },
+    { ref: DessertsRef, title: desserts.category },
+    { ref: SoftDrinksRef, title: softDrinks.category },
+    { ref: BeersRef, title: beers.category },
+    { ref: SpiritsRef, title: spirits.category },
+    { ref: CoffeesRef, title: coffee.category },
+    { ref: WineListRef, title: wines.category },
+    { ref: CocktailsRef, title: cocktails.category },
+    { ref: LiquersRef, title: liquers.category },
+  ];
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
@@ -88,7 +88,6 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    console.log("scrollPoition: " + scrollPosition);
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
