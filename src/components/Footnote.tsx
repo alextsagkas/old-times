@@ -2,7 +2,7 @@ import Image from "next/image";
 import MapPin from "../../icons/MapPin";
 import Phone from "../../icons/Phone";
 
-import PageComponent from "../helperComponents/PageComponent";
+import PageComponent from "../components/PageComponent";
 import { FootnoteProps } from "../../types/types";
 
 function Footnote({
@@ -69,7 +69,7 @@ function Footnote({
               href="https://alextsagkas.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:font-semibold hover:underline hover:decoration-orange-300 hover:decoration-2 hover:underline-offset-1 max-[800px]:underline max-[800px]:font-semibold max-[800px]:decoration-orange-300 max-[800px]:decoration-2 max-[800px]:underline-offset-1"
+              className="hover:font-semibold hover:underline hover:decoration-orange-300 hover:decoration-2 hover:underline-offset-1 max-[800px]:font-semibold max-[800px]:underline max-[800px]:decoration-orange-300 max-[800px]:decoration-2 max-[800px]:underline-offset-1"
             >
               alextsagkas
             </a>

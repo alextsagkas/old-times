@@ -1,4 +1,4 @@
-import PageComponent from "../helperComponents/PageComponent";
+import PageComponent from "../components/PageComponent";
 
 interface FoodDetailsProps {
   foodDetails: {
