@@ -1,17 +1,18 @@
+import { forwardRef } from "react";
 import { menuWineCategoryInterface } from "../../types/types";
 
 import MenuTitle from "../helperComponents/MenuTitle";
 import MenuWineItemMap from "../helperComponents/MenuWineItemMap";
 import PageComponent from "../helperComponents/PageComponent";
 
-interface menuProps {
+interface MenuWineProps {
   menuItem: menuWineCategoryInterface;
 }
 
-function MenuWineItem({ menuItem }: menuProps) {
+const MenuWineItem = forwardRef<HTMLDivElement, MenuWineProps>(({ menuItem }: MenuWineProps, ref: React.ForwardedRef<HTMLDivElement>) => {
   return (
     <PageComponent>
-      <div>
+      <div ref={ref}>
         <MenuTitle menuItem={menuItem} />
         <MenuWineItemMap menuItem={menuItem.items.white} />
         <MenuWineItemMap menuItem={menuItem.items.red} />
@@ -20,6 +21,6 @@ function MenuWineItem({ menuItem }: menuProps) {
       </div>
     </PageComponent>
   );
-}
+})
 
 export default MenuWineItem;

@@ -81,7 +81,7 @@ export interface IntroductionProps {
 }
 
 export interface PageComponentProps {
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export interface FootnoteProps {
@@ -89,4 +89,15 @@ export interface FootnoteProps {
   tripadvisorURL: string;
   road: string;
   telephone: string;
+}
+
+export interface NavBarProps {
+  scrollPosition: number;
+  children: React.ReactNode;
+  refs: RefsItemInterface[];
+}
+
+export interface RefsItemInterface {
+  ref: React.RefObject<HTMLDivElement>;
+  title: string;
 }
