@@ -1,7 +1,7 @@
 import Image from "next/image";
+
 import MapPin from "../../icons/MapPin";
 import Phone from "../../icons/Phone";
-
 import PageComponent from "../components/PageComponent";
 import { FootnoteProps } from "../../types/types";
 

@@ -1,13 +1,9 @@
 import { forwardRef } from "react";
-import { menuWineCategoryInterface } from "../../types/types";
 
 import MenuTitle from "../components/MenuTitle";
 import MenuWineItemMap from "../components/MenuWineItemMap";
 import PageComponent from "../components/PageComponent";
-
-interface MenuWineProps {
-  menuItem: menuWineCategoryInterface;
-}
+import { MenuWineProps } from "../../types/types";
 
 const MenuWineItem = forwardRef<HTMLDivElement, MenuWineProps>(
   ({ menuItem }: MenuWineProps, ref: React.ForwardedRef<HTMLDivElement>) => {

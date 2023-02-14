@@ -28,6 +28,60 @@ export interface menuItemInterface {
   price: number;
 }
 
+
+export interface FoodDetailsProps {
+  foodDetails: {
+    greek: string[];
+    english: string[];
+  };
+}
+
+
+export interface InfosFootnoteProps {
+  footnote: string[];
+}
+
+export interface InfosProps {
+  foodInfos: {
+    greek: string[];
+    english: string[];
+  };
+  restaurantInfos: {
+    greek: string[];
+    english: string[];
+  };
+}
+
+export interface MenuProps {
+  menuItem: menuCategoryInterface;
+}
+
+export interface MenuDessertProps {
+  menuItem: menuDessertCategoryInterface;
+}
+
+export interface MenuDessertItemMapProps {
+  menuItem: menuDessertCategoryInterface;
+}
+
+export interface MenuTitleProps {
+  menuItem: menuCategoryInterface | menuWineCategoryInterface;
+}
+
+export interface MenuItemMapProps {
+  menuItem: menuCategoryInterface;
+}
+
+
+export interface MenuWineProps {
+  menuItem: menuWineCategoryInterface;
+}
+
+
+export interface MenuWineItemMapProps {
+  menuItem: menuCategoryInterface;
+}
+
 export interface menuDessertItemInterface {
   name: string;
   description: string;

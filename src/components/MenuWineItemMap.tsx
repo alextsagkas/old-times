@@ -1,9 +1,6 @@
 import MenuItemMap from "./MenuItemMap";
-import { menuCategoryInterface } from "../../types/types";
 
-interface MenuWineItemMapProps {
-  menuItem: menuCategoryInterface;
-}
+import { MenuWineItemMapProps } from "../../types/types";
 
 const MenuWineItemMap = ({ menuItem }: MenuWineItemMapProps) => {
   return (

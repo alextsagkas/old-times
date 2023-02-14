@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-import { menuDessertCategoryInterface } from "../../types/types";
-
-interface MenuDessertItemMapProps {
-  menuItem: menuDessertCategoryInterface;
-}
+import { MenuDessertItemMapProps } from "../../types/types";
 
 const MenuDessertItemMap = ({ menuItem }: MenuDessertItemMapProps) => {
   return (

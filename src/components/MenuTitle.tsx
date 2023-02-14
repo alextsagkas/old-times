@@ -1,17 +1,10 @@
 import Image from "next/image";
 
-import {
-  menuCategoryInterface,
-  menuWineCategoryInterface,
-} from "../../types/types";
-
-interface MenuTitleProps {
-  menuItem: menuCategoryInterface | menuWineCategoryInterface;
-}
+import { MenuTitleProps } from "../../types/types";
 
 const MenuTitle = ({ menuItem }: MenuTitleProps) => {
   return (
-    <div className="flex flex-row items-center mb-4 md:mb-6">
+    <div className="mb-4 flex flex-row items-center md:mb-6">
       <h1 className="mr-2 font-vujahddayScript text-2xl font-bold text-primary">
         {menuItem.category}
       </h1>

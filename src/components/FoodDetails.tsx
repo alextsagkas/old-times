@@ -1,11 +1,6 @@
 import PageComponent from "../components/PageComponent";
+import { FoodDetailsProps } from "../../types/types";
 
-interface FoodDetailsProps {
-  foodDetails: {
-    greek: string[];
-    english: string[];
-  };
-}
 const FoodDetails = function ({ foodDetails }: FoodDetailsProps) {
   return (
     <PageComponent>

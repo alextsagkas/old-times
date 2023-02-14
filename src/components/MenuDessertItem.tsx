@@ -3,15 +3,10 @@ import { forwardRef } from "react";
 import MenuDessertItemMap from "../components/MenuDessertItemMap";
 import MenuTitle from "../components/MenuTitle";
 import PageComponent from "../components/PageComponent";
+import { MenuDessertProps } from "../../types/types";
 
-import { menuDessertCategoryInterface } from "../../types/types";
-
-interface MenuProps {
-  menuItem: menuDessertCategoryInterface;
-}
-
-const MenuDessertItem = forwardRef<HTMLDivElement, MenuProps>(
-  ({ menuItem }: MenuProps, ref: React.ForwardedRef<HTMLDivElement>) => {
+const MenuDessertItem = forwardRef<HTMLDivElement, MenuDessertProps>(
+  ({ menuItem }: MenuDessertProps, ref: React.ForwardedRef<HTMLDivElement>) => {
     return (
       <PageComponent>
         <div ref={ref}>
