@@ -53,7 +53,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
       >
         <PageComponent>
           <div className="grid grid-cols-3 items-center py-1">
-            <nav className="text-normal justify-self-start font-vujahddayScript font-bold text-primary">
+            <nav className="justify-self-start font-vujahddayScript text-lg md:text-2xl font-bold text-primary min-[330px]:text-xl">
               {title}
             </nav>
             <nav className="h-8 justify-self-center">
@@ -109,7 +109,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         }`}
       >
         <PageComponent>
-          <div className="grid h-fit grid-cols-2 justify-items-start gap-y-4 py-4 font-vujahddayScript text-lg">
+          <div className="grid h-fit grid-cols-2 justify-items-start gap-y-4 py-4 font-vujahddayScript text-2xl">
             {refs.map((ref) => {
               if (ref.title !== "Menu") {
                 return (

@@ -16,7 +16,7 @@ function Footnote({
       <PageComponent>
         <div className="mx-auto flex max-w-md flex-col gap-12">
           <div className="flex flex-row justify-between text-xs">
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-3">
               <a href={facebookURL} target="_blank" rel="noopener noreferrer">
                 <div className="flex flex-row items-center justify-start gap-1">
                   <Image
@@ -46,7 +46,7 @@ function Footnote({
                 </div>
               </a>
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-3">
               <a
                 href={"https://maps.app.goo.gl/DhyZsuY8GdrtpU5y6?g_st=ic"}
                 target="_blank"
