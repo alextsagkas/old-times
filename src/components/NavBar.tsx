@@ -47,7 +47,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 w-full border-b-2 border-primary bg-orange-100 ${
+        className={`fixed top-0 left-0 right-0 w-full border-b-2 border-primary bg-orange-50 ${
           isVisible ? "opacity-100" : " opacity-95"
         }`}
       >
@@ -115,7 +115,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
                 return (
                   <nav
                     key={ref.title}
-                    className={`w-full cursor-pointer text-center text-orange-100 transition-all duration-100 ease-out ${
+                    className={`w-full cursor-pointer text-center text-orange-50 transition-all duration-100 ease-out ${
                       isVisible ? "opacity-100" : "opacity-0"
                     }`}
                     onClick={(event) => {
