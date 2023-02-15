@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import MenuItemMapSubItems from "./MenuItemMapSubItems";
 
-import { MenuItemMapHelperProps } from "../../../types/types";
+import { type MenuItemMapHelperProps } from "../../../typescript/types";
 
 const MenuItemMap = ({ item, subCategory }: MenuItemMapHelperProps) => {
   if (item.subCategory === subCategory) {

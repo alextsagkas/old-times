@@ -1,4 +1,4 @@
-import { MenuItemMapSubItemsProps } from "../../../types/types";
+import { type MenuItemMapSubItemsProps } from "../../../typescript/types";
 
 const MenuItemMapSubItems = ({ item }: MenuItemMapSubItemsProps) => {
   if (item.subItems.length !== 0) {

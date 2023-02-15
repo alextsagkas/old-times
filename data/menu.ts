@@ -1,8 +1,8 @@
-import { menuInterface, menuCategoryInterface } from "../types/types";
+import { MenuInterface, MenuCategoryInterface } from "../typescript/interfaces";
 
 // Menu Infos
 
-export const menu: menuInterface = {
+export const menu: MenuInterface = {
   title: "OLD TIMES",
   subtitle: "Pizza - Pasta",
   road: "Spirou Arvanitaki 7",
@@ -49,7 +49,7 @@ export const menu: menuInterface = {
 
 // Menu Categories
 
-export const bruschetta: menuCategoryInterface = {
+export const bruschetta: MenuCategoryInterface = {
   category: "Bruschetta",
   fresh: 0,
   items: [
@@ -80,7 +80,7 @@ export const bruschetta: menuCategoryInterface = {
   ],
 };
 
-export const greekDips: menuCategoryInterface = {
+export const greekDips: MenuCategoryInterface = {
   category: "Greek dips",
   fresh: 0,
   items: [
@@ -156,7 +156,7 @@ export const greekDips: menuCategoryInterface = {
   ],
 };
 
-export const appetizers: menuCategoryInterface = {
+export const appetizers: MenuCategoryInterface = {
   category: "Appetizers",
   fresh: 0,
   items: [
@@ -220,7 +220,7 @@ export const appetizers: menuCategoryInterface = {
   ],
 };
 
-export const salads: menuCategoryInterface = {
+export const salads: MenuCategoryInterface = {
   category: "Salads",
   fresh: 0,
   items: [
@@ -270,7 +270,7 @@ export const salads: menuCategoryInterface = {
   ],
 };
 
-export const liquers: menuCategoryInterface = {
+export const liquers: MenuCategoryInterface = {
   category: "Liquers",
   fresh: 0,
   items: [
@@ -301,7 +301,7 @@ export const liquers: menuCategoryInterface = {
   ],
 };
 
-export const cocktails: menuCategoryInterface = {
+export const cocktails: MenuCategoryInterface = {
   category: "Cocktails",
   fresh: 0,
   items: [
@@ -340,7 +340,7 @@ export const cocktails: menuCategoryInterface = {
   ],
 };
 
-export const wines: menuCategoryInterface = {
+export const wines: MenuCategoryInterface = {
   category: "Wine List",
   fresh: 0,
   items: [
@@ -499,7 +499,7 @@ export const wines: menuCategoryInterface = {
   ],
 };
 
-export const coffee: menuCategoryInterface = {
+export const coffee: MenuCategoryInterface = {
   category: "Coffees",
   fresh: 0,
   items: [
@@ -642,7 +642,7 @@ export const coffee: menuCategoryInterface = {
   ],
 };
 
-export const spirits: menuCategoryInterface = {
+export const spirits: MenuCategoryInterface = {
   category: "Spirits",
   fresh: 0,
   items: [
@@ -729,7 +729,7 @@ export const spirits: menuCategoryInterface = {
   ],
 };
 
-export const beers: menuCategoryInterface = {
+export const beers: MenuCategoryInterface = {
   category: " Beers",
   fresh: 0,
   items: [
@@ -768,7 +768,7 @@ export const beers: menuCategoryInterface = {
   ],
 };
 
-export const softDrinks: menuCategoryInterface = {
+export const softDrinks: MenuCategoryInterface = {
   category: "Soft Drinks",
   fresh: 0,
   items: [
@@ -863,7 +863,7 @@ export const softDrinks: menuCategoryInterface = {
   ],
 };
 
-export const desserts: menuCategoryInterface = {
+export const desserts: MenuCategoryInterface = {
   category: "Desserts",
   fresh: 0,
   items: [
@@ -919,7 +919,7 @@ export const desserts: menuCategoryInterface = {
   ],
 };
 
-export const fruits: menuCategoryInterface = {
+export const fruits: MenuCategoryInterface = {
   category: "Fruits",
   fresh: 2,
   items: [
@@ -942,7 +942,7 @@ export const fruits: menuCategoryInterface = {
   ],
 };
 
-export const iceCreamMilkShake: menuCategoryInterface = {
+export const iceCreamMilkShake: MenuCategoryInterface = {
   category: "Ice cream and milkshake",
   fresh: 1,
   items: [
@@ -973,7 +973,7 @@ export const iceCreamMilkShake: menuCategoryInterface = {
   ],
 };
 
-export const traditional: menuCategoryInterface = {
+export const traditional: MenuCategoryInterface = {
   category: "Traditional Greek dishes",
   fresh: 0,
   items: [
@@ -1023,7 +1023,7 @@ export const traditional: menuCategoryInterface = {
   ],
 };
 
-export const pasta: menuCategoryInterface = {
+export const pasta: MenuCategoryInterface = {
   category: "Pasta",
   fresh: 0,
   items: [
@@ -1114,7 +1114,7 @@ export const pasta: menuCategoryInterface = {
   ],
 };
 
-export const pizza: menuCategoryInterface = {
+export const pizza: MenuCategoryInterface = {
   category: "Pizza",
   fresh: 0,
   items: [
@@ -1187,7 +1187,7 @@ export const pizza: menuCategoryInterface = {
   ],
 };
 
-export const grilled: menuCategoryInterface = {
+export const grilled: MenuCategoryInterface = {
   category: "Grilled",
   fresh: 0,
   items: [
@@ -1243,7 +1243,7 @@ export const grilled: menuCategoryInterface = {
   ],
 };
 
-export const seaFood: menuCategoryInterface = {
+export const seaFood: MenuCategoryInterface = {
   category: "Seafood",
   fresh: 0,
   items: [

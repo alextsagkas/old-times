@@ -3,18 +3,13 @@ import { useEffect, useState } from "react";
 
 import PageComponent from "../components/PageComponent";
 
-import { NavBarProps, RefsItemInterface } from "../../types/types";
+import { type NavBarProps } from "../../typescript/types";
+import { type RefsItemInterface } from "../../typescript/interfaces";
 
 const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
   const [title, setTitle] = useState("Menu");
   const [isVisible, setIsVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    if (window !== undefined) {
-      setWindowWidth(window.innerWidth);
-    }
-  }, []);
 
   const refShorTitle = (title: string): string => {
     if (title === "Traditional Greek dishes" && windowWidth < 768) {
@@ -25,6 +20,12 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
       return title;
     }
   };
+
+  useEffect(() => {
+    if (window !== undefined) {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
 
   useEffect(() => {
     refs.map((ref: RefsItemInterface) => {

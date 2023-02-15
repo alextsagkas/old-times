@@ -4,7 +4,7 @@ import MenuItemMapSubCategories from "../components/helpers/MenuItemMapSubCatego
 import MenuTitle from "../components/helpers/MenuTitle";
 import PageComponent from "../components/PageComponent";
 
-import { MenuProps } from "../../types/types";
+import { type MenuProps } from "../../typescript/types";
 
 const MenuItem = forwardRef<HTMLDivElement, MenuProps>(
   ({ menuItem }: MenuProps, ref: React.ForwardedRef<HTMLDivElement>) => {

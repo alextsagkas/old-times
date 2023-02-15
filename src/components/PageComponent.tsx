@@ -1,4 +1,4 @@
-import { PageComponentProps } from "../../types/types";
+import { type PageComponentProps } from "../../typescript/types";
 
 const PageComponent = ({ children }: PageComponentProps) => {
   return (

@@ -4,7 +4,7 @@ import MapPin from "../../icons/MapPin";
 import Phone from "../../icons/Phone";
 import PageComponent from "../components/PageComponent";
 
-import { FootnoteProps } from "../../types/types";
+import { type FootnoteProps } from "../../typescript/types";
 
 function Footnote({
   facebookURL,

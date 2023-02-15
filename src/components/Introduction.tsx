@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import PageComponent from "../components/PageComponent";
 
-import { IntroductionProps } from "../../types/types";
+import { type IntroductionProps } from "../../typescript/types";
 
 const Introduction = forwardRef<HTMLDivElement, IntroductionProps>(
   (

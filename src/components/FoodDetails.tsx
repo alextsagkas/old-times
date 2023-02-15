@@ -1,6 +1,6 @@
 import PageComponent from "../components/PageComponent";
 
-import { FoodDetailsProps } from "../../types/types";
+import { type FoodDetailsProps } from "../../typescript/types";
 
 const FoodDetails = function ({ foodDetails }: FoodDetailsProps) {
   return (
