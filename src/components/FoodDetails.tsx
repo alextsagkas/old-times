@@ -1,4 +1,5 @@
 import PageComponent from "../components/PageComponent";
+
 import { FoodDetailsProps } from "../../types/types";
 
 const FoodDetails = function ({ foodDetails }: FoodDetailsProps) {

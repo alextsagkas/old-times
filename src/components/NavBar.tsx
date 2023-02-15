@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import PageComponent from "../components/PageComponent";
+
 import { NavBarProps, RefsItemInterface } from "../../types/types";
 
 const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
@@ -47,13 +48,13 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 w-full border-b-2 border-primary bg-orange-50 ${
+        className={`fixed top-0 left-0 right-0 w-full border-b-2 border-primary bg-secondary-100 ${
           isVisible ? "opacity-100" : " opacity-95"
         }`}
       >
         <PageComponent>
           <div className="grid grid-cols-3 items-center py-1">
-            <nav className="justify-self-start font-vujahddayScript text-lg md:text-2xl font-bold text-primary min-[330px]:text-xl">
+            <nav className="justify-self-start font-vujahddayScript text-lg font-bold text-primary min-[330px]:text-xl md:text-2xl">
               {title}
             </nav>
             <nav className="h-8 justify-self-center">
@@ -115,7 +116,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
                 return (
                   <nav
                     key={ref.title}
-                    className={`w-full cursor-pointer text-center text-orange-50 transition-all duration-100 ease-out ${
+                    className={`w-full cursor-pointer text-center text-secondary-100 transition-all duration-100 ease-out ${
                       isVisible ? "opacity-100" : "opacity-0"
                     }`}
                     onClick={(event) => {

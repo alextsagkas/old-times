@@ -21,21 +21,12 @@ export interface menuInterface {
   footnote: string[];
 }
 
-export interface menuItemInterface {
-  name: string;
-  description: string;
-  fresh: number;
-  price: number;
-}
-
-
 export interface FoodDetailsProps {
   foodDetails: {
     greek: string[];
     english: string[];
   };
 }
-
 
 export interface InfosFootnoteProps {
   footnote: string[];
@@ -49,82 +40,6 @@ export interface InfosProps {
   restaurantInfos: {
     greek: string[];
     english: string[];
-  };
-}
-
-export interface MenuProps {
-  menuItem: menuCategoryInterface;
-}
-
-export interface MenuDessertProps {
-  menuItem: menuDessertCategoryInterface;
-}
-
-export interface MenuDessertItemMapProps {
-  menuItem: menuDessertCategoryInterface;
-}
-
-export interface MenuTitleProps {
-  menuItem: menuCategoryInterface | menuWineCategoryInterface;
-}
-
-export interface MenuItemMapProps {
-  menuItem: menuCategoryInterface;
-}
-
-
-export interface MenuWineProps {
-  menuItem: menuWineCategoryInterface;
-}
-
-
-export interface MenuWineItemMapProps {
-  menuItem: menuCategoryInterface;
-}
-
-export interface menuDessertItemInterface {
-  name: string;
-  description: string;
-  fresh: number;
-  price: number;
-  items: menuItemInterface[];
-}
-
-export interface menuCategoryInterface {
-  category: string;
-  fresh: number;
-  items: menuItemInterface[];
-}
-
-export interface menuDessertCategoryInterface {
-  category: string;
-  fresh: number;
-  items: menuDessertItemInterface[];
-}
-export interface menuWineCategoryInterface {
-  category: string;
-  fresh: number;
-  items: {
-    white: {
-      category: string;
-      fresh: number;
-      items: menuItemInterface[];
-    };
-    red: {
-      category: string;
-      fresh: number;
-      items: menuItemInterface[];
-    };
-    rose: {
-      category: string;
-      fresh: number;
-      items: menuItemInterface[];
-    };
-    sparkling: {
-      category: string;
-      fresh: number;
-      items: menuItemInterface[];
-    };
   };
 }
 
@@ -154,4 +69,47 @@ export interface NavBarProps {
 export interface RefsItemInterface {
   ref: React.RefObject<HTMLDivElement>;
   title: string;
+}
+
+export interface menuItemInterface {
+  name: string;
+  subCategory: string;
+  description: string;
+  fresh: number;
+  price: number;
+  subItems: MenuSubItemInterface[];
+}
+
+export interface MenuSubItemInterface {
+  name: string;
+  description: string;
+  fresh: number;
+  price: number;
+}
+
+export interface menuCategoryInterface {
+  category: string;
+  fresh: number;
+  items: menuItemInterface[];
+}
+
+export interface MenuProps {
+  menuItem: menuCategoryInterface;
+}
+
+export interface MenuTitleProps {
+  menuItem: menuCategoryInterface;
+}
+
+export interface MenuItemMapProps {
+  menuItem: menuCategoryInterface;
+}
+
+export interface MenuItemMapHelperProps {
+  item: menuItemInterface;
+  subCategory: string;
+}
+
+export interface MenuItemMapSubItemsProps {
+  item: menuItemInterface;
 }

@@ -1,8 +1,9 @@
 import { forwardRef } from "react";
 
-import MenuItemMap from "../components/MenuItemMap";
-import MenuTitle from "../components/MenuTitle";
+import MenuItemMapSubCategories from "../components/helpers/MenuItemMapSubCategories";
+import MenuTitle from "../components/helpers/MenuTitle";
 import PageComponent from "../components/PageComponent";
+
 import { MenuProps } from "../../types/types";
 
 const MenuItem = forwardRef<HTMLDivElement, MenuProps>(
@@ -11,7 +12,7 @@ const MenuItem = forwardRef<HTMLDivElement, MenuProps>(
       <PageComponent>
         <div ref={ref}>
           <MenuTitle menuItem={menuItem} />
-          <MenuItemMap menuItem={menuItem} />
+          <MenuItemMapSubCategories menuItem={menuItem} />
         </div>
       </PageComponent>
     );

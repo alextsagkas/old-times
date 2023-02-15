@@ -1,4 +1,5 @@
 import PageComponent from "../components/PageComponent";
+
 import { InfosFootnoteProps } from "../../types/types";
 
 const InfosFootnote = ({ footnote }: InfosFootnoteProps) => {

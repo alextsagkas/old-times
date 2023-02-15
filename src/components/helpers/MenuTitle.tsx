@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { MenuTitleProps } from "../../types/types";
+import { MenuTitleProps } from "../../../types/types";
 
 const MenuTitle = ({ menuItem }: MenuTitleProps) => {
   return (

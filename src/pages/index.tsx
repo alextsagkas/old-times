@@ -31,9 +31,7 @@ import Footnote from "../components/Footnote";
 import Infos from "../components/Infos";
 import InfosFootnote from "../components/InfosFootnote";
 import Introduction from "../components/Introduction";
-import MenuDessertItem from "../components/MenuDessertItem";
 import MenuItem from "../components/MenuItem";
-import MenuWineItem from "../components/MenuWineItem";
 import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
@@ -105,7 +103,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <NavBar refs={refs} scrollPosition={scrollPosition}>
-        <main className="flex flex-col gap-8 bg-orange-50 text-center md:gap-12">
+        <main className="flex flex-col gap-8 bg-secondary-100 text-center md:gap-12">
           <Introduction
             title={menu.title}
             subtitle={menu.subtitle}
@@ -124,7 +122,7 @@ const Home: NextPage = () => {
           <MenuItem menuItem={traditional} ref={TraditionalRef} />
           <MenuItem menuItem={iceCreamMilkShake} ref={IceCreamMilkShakeRef} />
           <MenuItem menuItem={fruits} ref={FruitsRef} />
-          <MenuDessertItem menuItem={desserts} ref={DessertsRef} />
+          <MenuItem menuItem={desserts} ref={DessertsRef} />
           <Separator />
           <FoodDetails foodDetails={menu.foodDetails} />
           <Separator />
@@ -132,7 +130,7 @@ const Home: NextPage = () => {
           <MenuItem menuItem={beers} ref={BeersRef} />
           <MenuItem menuItem={spirits} ref={SpiritsRef} />
           <MenuItem menuItem={coffee} ref={CoffeesRef} />
-          <MenuWineItem menuItem={wines} ref={WineListRef} />
+          <MenuItem menuItem={wines} ref={WineListRef} />
           <MenuItem menuItem={cocktails} ref={CocktailsRef} />
           <MenuItem menuItem={liquers} ref={LiquersRef} />
           <Separator />

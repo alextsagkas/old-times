@@ -1,4 +1,5 @@
 import PageComponent from "../components/PageComponent";
+
 import { InfosProps } from "../../types/types";
 
 const Infos = ({ foodInfos, restaurantInfos }: InfosProps) => {

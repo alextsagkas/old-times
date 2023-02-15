@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import Image from "next/image";
 
 import PageComponent from "../components/PageComponent";
+
 import { IntroductionProps } from "../../types/types";
 
 const Introduction = forwardRef<HTMLDivElement, IntroductionProps>(
