@@ -417,7 +417,7 @@ export const wines: MenuCategoryInterface = {
       subItems: [],
     },
     {
-      name: "Karipidis Merlo",
+      name: "Karipidis Merlot",
       subCategory: "Red wine",
       description: "dry (bio)",
       fresh: 0,
@@ -425,7 +425,7 @@ export const wines: MenuCategoryInterface = {
       subItems: [],
     },
     {
-      name: "Alpha Estate Merlo",
+      name: "Alpha Estate Merlot",
       subCategory: "Red wine",
       description: "Syrah Xinomavro",
       fresh: 0,
@@ -443,7 +443,7 @@ export const wines: MenuCategoryInterface = {
     {
       name: "Domain Lazaridis",
       subCategory: "Rosé wine",
-      description: "Merlo Rosé",
+      description: "Merlot Rosé",
       fresh: 0,
       price: 29.0,
       subItems: [],
@@ -981,7 +981,7 @@ export const traditional: MenuCategoryInterface = {
       name: "Pastitsada",
       subCategory: "",
       description:
-        "simmered beef with spices and ren wine sauce served with pappardelle",
+        "simmered beef with spices and red wine sauce served with pappardelle",
       fresh: 0,
       price: 11.9,
       subItems: [],

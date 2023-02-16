@@ -5,7 +5,7 @@ import { type MenuTitleProps } from "../../../typescript/types";
 const MenuTitle = ({ menuItem }: MenuTitleProps) => {
   return (
     <div className="mb-4 flex flex-row items-center md:mb-6">
-      <h1 className="mr-2 font-vujahddayScript text-2xl font-bold text-primary">
+      <h1 className="mr-2 font-vujahddayScript text-3xl font-bold text-primary">
         {menuItem.category}
       </h1>
       {menuItem.fresh === 1 && (
@@ -14,7 +14,7 @@ const MenuTitle = ({ menuItem }: MenuTitleProps) => {
           alt="vegetarian-icon"
           width={48}
           height={48}
-          className="h-3 w-3"
+          className="h-5 w-5"
         />
       )}
       {menuItem.fresh === 2 && (
@@ -24,14 +24,14 @@ const MenuTitle = ({ menuItem }: MenuTitleProps) => {
             alt="vegetarian-icon"
             width={48}
             height={48}
-            className="h-3 w-3"
+            className="h-5 w-5"
           />
           <Image
             src="/vegetarianIcon.png"
             alt="vegetarian-icon"
             width={48}
             height={48}
-            className="h-3 w-3"
+            className="h-5 w-5"
           />
         </div>
       )}

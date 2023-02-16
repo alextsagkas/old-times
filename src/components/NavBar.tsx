@@ -9,23 +9,16 @@ import { type RefsItemInterface } from "../../typescript/interfaces";
 const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
   const [title, setTitle] = useState("Menu");
   const [isVisible, setIsVisible] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
 
   const refShorTitle = (title: string): string => {
-    if (title === "Traditional Greek dishes" && windowWidth < 768) {
+    if (title === "Traditional Greek dishes") {
       return "Traditional";
-    } else if (title === "Ice cream and milkshake" && windowWidth < 768) {
+    } else if (title === "Ice cream and milkshake") {
       return "Ice cream";
     } else {
       return title;
     }
   };
-
-  useEffect(() => {
-    if (window !== undefined) {
-      setWindowWidth(window.innerWidth);
-    }
-  }, []);
 
   useEffect(() => {
     refs.map((ref: RefsItemInterface) => {
@@ -54,7 +47,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         }`}
       >
         <PageComponent>
-          <div className="grid grid-cols-3 items-center py-1">
+          <div className="grid grid-cols-3 items-center py-1 md:py-2">
             <nav className="justify-self-start font-vujahddayScript text-lg font-bold text-primary min-[330px]:text-xl md:text-2xl">
               {title}
             </nav>

@@ -12,7 +12,7 @@ const Introduction = forwardRef<HTMLDivElement, IntroductionProps>(
   ) => {
     return (
       <PageComponent>
-        <div className="pt-16" ref={IntroRef}>
+        <div className="pt-16 text-center" ref={IntroRef}>
           <Image
             width={200}
             height={200}

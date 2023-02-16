@@ -10,7 +10,7 @@ const MenuItemMap = ({ item, subCategory }: MenuItemMapHelperProps) => {
       <div className="flex flex-row items-start justify-between gap-10 xs:gap-20 min-[750px]:gap-4 md:gap-10">
         <div className="flex flex-col items-start gap-1">
           <div className="flex flex-row items-center gap-2">
-            <h2 className="text-left font-merriweather text-xs font-bold">
+            <h2 className="text-left font-merriweather text-sm font-bold">
               {item.name}
             </h2>
             {item.fresh === 1 && (
@@ -42,7 +42,7 @@ const MenuItemMap = ({ item, subCategory }: MenuItemMapHelperProps) => {
             )}
           </div>
           {item.description != "" && (
-            <h3 className="text-left font-sans text-xs text-gray-500">
+            <h3 className="text-left font-sans text-sm text-gray-500">
               {item.description}
             </h3>
           )}

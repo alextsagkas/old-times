@@ -103,7 +103,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <NavBar refs={refs} scrollPosition={scrollPosition}>
-        <main className="flex flex-col gap-8 bg-secondary-100 text-center md:gap-12">
+        <main className="flex flex-col gap-14 bg-secondary-100 md:gap-12">
           <Introduction
             title={menu.title}
             subtitle={menu.subtitle}
