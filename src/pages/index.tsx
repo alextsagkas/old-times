@@ -1,5 +1,5 @@
 import { createRef, useEffect, useState } from "react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 
 import { prisma } from "../server/db";
@@ -13,9 +13,9 @@ import Introduction from "../components/Introduction";
 import MenuItem from "../components/MenuItem";
 import NavBar from "../components/NavBar";
 
-import { GetStatitPropsReturnedType, HomeProps } from "../../typescript/types";
+import type { GetStatitPropsReturnedType, HomeProps } from "../../typescript/types";
 
-import {
+import type {
   MenuCategoryInterface,
   MenuInterface,
   RefsItemInterface,

@@ -34,6 +34,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         setTitle("Menu");
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollPosition, isVisible]);
 
   const hamburgerLine =
