@@ -38,7 +38,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
   }, [scrollPosition, isVisible]);
 
   const hamburgerLine =
-    "h-[3px] w-6 my-[2.5px] rounded-full bg-primary transition-all ease-in-out opacity-100 duration-[500ms]";
+    "h-[4px] w-8 my-[2.5px] rounded-full bg-primary transition-all ease-in-out opacity-100 duration-[500ms]";
 
   return (
     <>
@@ -48,7 +48,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         }`}
       >
         <PageComponent>
-          <div className="grid grid-cols-3 items-center py-1 md:py-2">
+          <div className="grid grid-cols-3 items-center py-2 md:py-2">
             <nav className="justify-self-start font-vujahddayScript text-lg font-bold text-primary min-[330px]:text-xl md:text-2xl">
               {title}
             </nav>
@@ -81,7 +81,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
               >
                 <div
                   className={`${hamburgerLine} ${
-                    isVisible ? "translate-y-[8px] rotate-45" : ""
+                    isVisible ? "translate-y-[9px] rotate-45" : ""
                   }`}
                 />
                 <div
@@ -91,7 +91,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
                 />
                 <div
                   className={`${hamburgerLine} ${
-                    isVisible ? "-translate-y-[8px] -rotate-45" : ""
+                    isVisible ? "-translate-y-[9px] -rotate-45" : ""
                   }`}
                 />
               </button>
@@ -100,7 +100,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         </PageComponent>
       </div>
       <section
-        className={`fixed top-10 h-full w-full origin-top bg-primary transition-all duration-[400ms] ease-out ${
+        className={`fixed top-[49px] h-full w-full origin-top bg-primary transition-all duration-[400ms] ease-out ${
           isVisible ? "scale-y-100" : "scale-y-0"
         }`}
       >

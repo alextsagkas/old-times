@@ -13,7 +13,10 @@ import Introduction from "../components/Introduction";
 import MenuItem from "../components/MenuItem";
 import NavBar from "../components/NavBar";
 
-import type { GetStatitPropsReturnedType, HomeProps } from "../../typescript/types";
+import type {
+  GetStatitPropsReturnedType,
+  HomeProps,
+} from "../../typescript/types";
 
 import type {
   MenuCategoryInterface,
@@ -137,6 +140,10 @@ const Home: NextPage<HomeProps> = ({ categories, menu }) => {
     };
   }, [scrollPosition]);
 
+  categories.map((category, index) => {
+    console.log(index, category.category);
+  });
+
   return (
     <>
       <Head>
@@ -160,8 +167,8 @@ const Home: NextPage<HomeProps> = ({ categories, menu }) => {
               return (
                 <MenuItem
                   key={category.id}
-                  menuItem={category}
-                  ref={(refs[index] as RefsItemInterface).ref}
+                  menuItem={categories[index] as MenuCategoryInterface}
+                  ref={(refs[index + 1] as RefsItemInterface).ref}
                 />
               );
             }
@@ -179,8 +186,8 @@ const Home: NextPage<HomeProps> = ({ categories, menu }) => {
               return (
                 <MenuItem
                   key={category.id}
-                  menuItem={category}
-                  ref={(refs[index] as RefsItemInterface).ref}
+                  menuItem={categories[index] as MenuCategoryInterface}
+                  ref={(refs[index + 1] as RefsItemInterface).ref}
                 />
               );
             }
@@ -221,6 +228,9 @@ export const getStaticProps = async (): Promise<GetStatitPropsReturnedType> => {
           subItems: true,
         },
       },
+    },
+    orderBy: {
+      position: "asc",
     },
   });
 
