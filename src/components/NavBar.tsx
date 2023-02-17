@@ -7,8 +7,8 @@ import { type NavBarProps } from "../../typescript/types";
 import { type RefsItemInterface } from "../../typescript/interfaces";
 
 const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
-  const [title, setTitle] = useState("Menu");
-  const [isVisible, setIsVisible] = useState(false);
+  const [title, setTitle] = useState<string>("Menu");
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const refShorTitle = (title: string): string => {
     if (title === "Traditional Greek dishes") {

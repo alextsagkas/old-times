@@ -6,7 +6,7 @@ const MenuItemMapSubItems = ({ item }: MenuItemMapSubItemsProps) => {
       <ul className="mt-2 flex flex-col gap-2 text-left">
         {item.subItems.map((subItem) => (
           <li
-            key={subItem.name}
+            key={subItem.id}
             className="flex flex-row justify-between gap-3 font-merriweather text-xs"
           >
             <div className="flex flex-row justify-start gap-1">

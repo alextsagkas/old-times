@@ -1,17 +1,56 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-model Example {
-    id        String   @id @default(cuid())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+model MenuCategory {
+  id        String     @id @default(uuid())
+  category  String     @unique
+  fresh     Int
+  position  Int        @unique @default(autoincrement())
+  MenuItems MenuItem[]
+}
+
+model MenuItem {
+  id             String        @id @default(uuid())
+  name           String
+  subCategory    String
+  description    String
+  fresh          Int
+  price          Float
+  menuCategoryId String
+  MenuCategory   MenuCategory  @relation(fields: [menuCategoryId], references: [id])
+  subItems       MenuSubItem[]
+}
+
+model MenuSubItem {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  fresh       Int
+  price       Float
+  menuItemId  String
+  MenuItem    MenuItem @relation(fields: [menuItemId], references: [id])
+}
+
+model Menu {
+  id                     String   @id @default(uuid())
+  title                  String
+  subtitle               String
+  road                   String
+  telephone              String
+  facebook               String
+  tripadvisor            String
+  description            String
+  foodDetailsGreek       String[]
+  foodDetailsEnglish     String[]
+  foodInfosGreek         String[]
+  foodInfosEnglish       String[]
+  restaurantInfosGreek   String[]
+  restaurantInfosEnglish String[]
+  footnote               String[]
 }

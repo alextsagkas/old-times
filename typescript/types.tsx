@@ -1,8 +1,14 @@
 import {
   MenuCategoryInterface,
+  MenuInterface,
   MenuItemInterface,
   RefsItemInterface,
 } from "./interfaces";
+
+export type HomeProps = {
+  categories: MenuCategoryInterface[];
+  menu: MenuInterface
+};
 
 export type MenuProps = {
   menuItem: MenuCategoryInterface;
@@ -67,4 +73,12 @@ export type NavBarProps = {
   scrollPosition: number;
   children: React.ReactNode;
   refs: RefsItemInterface[];
+};
+
+export type GetStatitPropsReturnedType = {
+  props: {
+    categories: MenuCategoryInterface[];
+    menu: MenuInterface
+  };
+  revalidate: number;
 };

@@ -1,29 +1,8 @@
-import { type NextPage } from "next";
-import Head from "next/head";
 import { createRef, useEffect, useState } from "react";
+import { GetServerSideProps, NextPage } from "next";
+import Head from "next/head";
 
-import {
-  menu,
-  bruschetta,
-  greekDips,
-  appetizers,
-  salads,
-  seaFood,
-  grilled,
-  pizza,
-  pasta,
-  traditional,
-  iceCreamMilkShake,
-  fruits,
-  desserts,
-  softDrinks,
-  beers,
-  spirits,
-  coffee,
-  cocktails,
-  liquers,
-  wines,
-} from "../../data/menu";
+import { prisma } from "../server/db";
 
 import Separator from "../components/Separator";
 import FoodDetails from "../components/FoodDetails";
@@ -34,7 +13,15 @@ import Introduction from "../components/Introduction";
 import MenuItem from "../components/MenuItem";
 import NavBar from "../components/NavBar";
 
-const Home: NextPage = () => {
+import { GetStatitPropsReturnedType, HomeProps } from "../../typescript/types";
+
+import {
+  MenuCategoryInterface,
+  MenuInterface,
+  RefsItemInterface,
+} from "../../typescript/interfaces";
+
+const Home: NextPage<HomeProps> = ({ categories, menu }) => {
   const IntroRef = createRef<HTMLDivElement>();
   const BruschettaRef = createRef<HTMLDivElement>();
   const GreekDipsRef = createRef<HTMLDivElement>();
@@ -58,28 +45,85 @@ const Home: NextPage = () => {
 
   const refs = [
     { ref: IntroRef, title: "Menu" },
-    { ref: BruschettaRef, title: bruschetta.category },
-    { ref: GreekDipsRef, title: greekDips.category },
-    { ref: AppetizersRef, title: appetizers.category },
-    { ref: SaladsRef, title: salads.category },
-    { ref: SeaFoodRef, title: seaFood.category },
-    { ref: GrilledRef, title: grilled.category },
-    { ref: PizzaRef, title: pizza.category },
-    { ref: PastaRef, title: pasta.category },
-    { ref: TraditionalRef, title: traditional.category },
-    { ref: IceCreamMilkShakeRef, title: iceCreamMilkShake.category },
-    { ref: FruitsRef, title: fruits.category },
-    { ref: DessertsRef, title: desserts.category },
-    { ref: SoftDrinksRef, title: softDrinks.category },
-    { ref: BeersRef, title: beers.category },
-    { ref: SpiritsRef, title: spirits.category },
-    { ref: CoffeesRef, title: coffee.category },
-    { ref: WineListRef, title: wines.category },
-    { ref: CocktailsRef, title: cocktails.category },
-    { ref: LiquersRef, title: liquers.category },
+    {
+      ref: BruschettaRef,
+      title: (categories[0] as MenuCategoryInterface).category,
+    },
+    {
+      ref: GreekDipsRef,
+      title: (categories[1] as MenuCategoryInterface).category,
+    },
+    {
+      ref: AppetizersRef,
+      title: (categories[2] as MenuCategoryInterface).category,
+    },
+    {
+      ref: SaladsRef,
+      title: (categories[3] as MenuCategoryInterface).category,
+    },
+    {
+      ref: SeaFoodRef,
+      title: (categories[4] as MenuCategoryInterface).category,
+    },
+    {
+      ref: GrilledRef,
+      title: (categories[5] as MenuCategoryInterface).category,
+    },
+    {
+      ref: PizzaRef,
+      title: (categories[6] as MenuCategoryInterface).category,
+    },
+    {
+      ref: PastaRef,
+      title: (categories[7] as MenuCategoryInterface).category,
+    },
+    {
+      ref: TraditionalRef,
+      title: (categories[8] as MenuCategoryInterface).category,
+    },
+    {
+      ref: IceCreamMilkShakeRef,
+      title: (categories[9] as MenuCategoryInterface).category,
+    },
+    {
+      ref: FruitsRef,
+      title: (categories[10] as MenuCategoryInterface).category,
+    },
+    {
+      ref: DessertsRef,
+      title: (categories[11] as MenuCategoryInterface).category,
+    },
+    {
+      ref: SoftDrinksRef,
+      title: (categories[12] as MenuCategoryInterface).category,
+    },
+    {
+      ref: BeersRef,
+      title: (categories[13] as MenuCategoryInterface).category,
+    },
+    {
+      ref: SpiritsRef,
+      title: (categories[14] as MenuCategoryInterface).category,
+    },
+    {
+      ref: CoffeesRef,
+      title: (categories[15] as MenuCategoryInterface).category,
+    },
+    {
+      ref: WineListRef,
+      title: (categories[16] as MenuCategoryInterface).category,
+    },
+    {
+      ref: CocktailsRef,
+      title: (categories[17] as MenuCategoryInterface).category,
+    },
+    {
+      ref: LiquersRef,
+      title: (categories[18] as MenuCategoryInterface).category,
+    },
   ];
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -111,32 +155,46 @@ const Home: NextPage = () => {
             ref={IntroRef}
           />
           <Separator />
-          <MenuItem menuItem={bruschetta} ref={BruschettaRef} />
-          <MenuItem menuItem={greekDips} ref={GreekDipsRef} />
-          <MenuItem menuItem={appetizers} ref={AppetizersRef} />
-          <MenuItem menuItem={salads} ref={SaladsRef} />
-          <MenuItem menuItem={seaFood} ref={SeaFoodRef} />
-          <MenuItem menuItem={grilled} ref={GrilledRef} />
-          <MenuItem menuItem={pizza} ref={PizzaRef} />
-          <MenuItem menuItem={pasta} ref={PastaRef} />
-          <MenuItem menuItem={traditional} ref={TraditionalRef} />
-          <MenuItem menuItem={iceCreamMilkShake} ref={IceCreamMilkShakeRef} />
-          <MenuItem menuItem={fruits} ref={FruitsRef} />
-          <MenuItem menuItem={desserts} ref={DessertsRef} />
+          {categories.map((category, index) => {
+            if (category.position <= 12) {
+              return (
+                <MenuItem
+                  key={category.id}
+                  menuItem={category}
+                  ref={(refs[index] as RefsItemInterface).ref}
+                />
+              );
+            }
+          })}
           <Separator />
-          <FoodDetails foodDetails={menu.foodDetails} />
+          <FoodDetails
+            foodDetails={{
+              greek: menu.foodDetailsGreek,
+              english: menu.foodDetailsEnglish,
+            }}
+          />
           <Separator />
-          <MenuItem menuItem={softDrinks} ref={SoftDrinksRef} />
-          <MenuItem menuItem={beers} ref={BeersRef} />
-          <MenuItem menuItem={spirits} ref={SpiritsRef} />
-          <MenuItem menuItem={coffee} ref={CoffeesRef} />
-          <MenuItem menuItem={wines} ref={WineListRef} />
-          <MenuItem menuItem={cocktails} ref={CocktailsRef} />
-          <MenuItem menuItem={liquers} ref={LiquersRef} />
+          {categories.map((category, index) => {
+            if (category.position > 12 && index <= refs.length) {
+              return (
+                <MenuItem
+                  key={category.id}
+                  menuItem={category}
+                  ref={(refs[index] as RefsItemInterface).ref}
+                />
+              );
+            }
+          })}
           <Separator />
           <Infos
-            foodInfos={menu.foodInfos}
-            restaurantInfos={menu.restaurantInfos}
+            foodInfos={{
+              greek: menu.foodInfosGreek,
+              english: menu.foodInfosEnglish,
+            }}
+            restaurantInfos={{
+              greek: menu.restaurantInfosGreek,
+              english: menu.restaurantInfosEnglish,
+            }}
           />
           <Separator />
           <InfosFootnote footnote={menu.footnote} />
@@ -154,3 +212,30 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetServerSideProps =
+  async (): Promise<GetStatitPropsReturnedType> => {
+    const categories = await prisma.menuCategory.findMany({
+      include: {
+        MenuItems: {
+          include: {
+            subItems: true,
+          },
+        },
+      },
+    });
+
+    const menu = (await prisma.menu.findFirst({
+      where: {
+        id: "5133110a-4b5c-4208-bf6f-dd7c6a505076",
+      },
+    })) as MenuInterface;
+
+    return {
+      props: {
+        categories,
+        menu,
+      },
+      revalidate: 3600, // in seconds
+    };
+  };
