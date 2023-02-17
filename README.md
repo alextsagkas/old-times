@@ -1,28 +1,20 @@
-# Create T3 App
+# Old Times Corfu
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is an attempt to assist my dear friend Arathymos with his business by providing
+online support for his restaurant's menu. For this project the following tools are used.
 
-## What's next? How do I make an app with this?
+## Toolkit
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Undoubtedly, one of the best ways to build a typesafe Next.js app is `create-t3-app`.
+So, by using it on my terminal I added support for:
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+1. **Typescript**: allows the development of typesafe javascript apps
+2. **Tailwind CSS**: utility-first CSS framework
+3. **Prisma**: ORM for relational databases. Provides auto-completion, automated migrations and typesafety.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+To implement the app I also used the following data-related tools:
 
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+4. **PostgreSQL**: for the relational database
+5. **AWS-RDS**: host the database
+6. **pgAdmin**: easy access to the database by the businessmen
+7. **Cloudflare**: to buy the custom domain
