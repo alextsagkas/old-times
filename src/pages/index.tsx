@@ -1,5 +1,5 @@
 import { createRef, useEffect, useState } from "react";
-import { GetServerSideProps, NextPage } from "next";
+import { NextPage } from "next";
 import Head from "next/head";
 
 import { prisma } from "../server/db";
@@ -213,29 +213,28 @@ const Home: NextPage<HomeProps> = ({ categories, menu }) => {
 
 export default Home;
 
-export const getStaticProps: GetServerSideProps =
-  async (): Promise<GetStatitPropsReturnedType> => {
-    const categories = await prisma.menuCategory.findMany({
-      include: {
-        MenuItems: {
-          include: {
-            subItems: true,
-          },
+export const getStaticProps = async (): Promise<GetStatitPropsReturnedType> => {
+  const categories = await prisma.menuCategory.findMany({
+    include: {
+      MenuItems: {
+        include: {
+          subItems: true,
         },
       },
-    });
+    },
+  });
 
-    const menu = (await prisma.menu.findFirst({
-      where: {
-        id: "5133110a-4b5c-4208-bf6f-dd7c6a505076",
-      },
-    })) as MenuInterface;
+  const menu = (await prisma.menu.findFirst({
+    where: {
+      id: "5133110a-4b5c-4208-bf6f-dd7c6a505076",
+    },
+  })) as MenuInterface;
 
-    return {
-      props: {
-        categories,
-        menu,
-      },
-      revalidate: 3600, // in seconds
-    };
+  return {
+    props: {
+      categories,
+      menu,
+    },
+    revalidate: 3600, // in seconds
   };
+};
