@@ -49,7 +49,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
       >
         <PageComponent>
           <div className="grid grid-cols-3 items-center py-2 md:py-2">
-            <nav className="justify-self-start font-serif text-lg font-medium text-primary min-[330px]:text-xl md:text-2xl">
+            <nav className="justify-self-start font-serif text-base font-medium text-primary min-[330px]:text-lg min-[370px]:text-xl md:text-2xl">
               {title}
             </nav>
             <nav className="h-8 justify-self-center">
