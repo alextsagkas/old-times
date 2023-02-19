@@ -5,7 +5,7 @@ import { type MenuTitleProps } from "../../../typescript/types";
 const MenuTitle = ({ menuItem }: MenuTitleProps) => {
   return (
     <div className="mb-4 flex flex-row items-center md:mb-6">
-      <h1 className="mr-2 font-vujahddayScript text-3xl font-bold text-primary">
+      <h1 className="mr-2 font-serif text-2xl font-bold text-primary">
         {menuItem.category}
       </h1>
       {menuItem.fresh === 1 && (
