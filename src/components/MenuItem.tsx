@@ -10,7 +10,7 @@ const MenuItem = forwardRef<HTMLDivElement, MenuProps>(
   ({ menuItem }: MenuProps, ref: React.ForwardedRef<HTMLDivElement>) => {
     return (
       <PageComponent>
-        <div ref={ref}>
+        <div ref={ref} className="scroll-mt-2">
           <MenuTitle menuItem={menuItem} />
           <MenuItemMapSubCategories menuItem={menuItem} />
         </div>

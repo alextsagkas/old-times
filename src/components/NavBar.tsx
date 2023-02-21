@@ -24,7 +24,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
     refs.map((ref: RefsItemInterface) => {
       if (
         ref.ref.current?.getBoundingClientRect() !== undefined &&
-        ref.ref.current?.getBoundingClientRect().top < 7 &&
+        ref.ref.current?.getBoundingClientRect().top < 10 &&
         !isVisible
       ) {
         setTitle(refShorTitle(ref.title));
@@ -49,7 +49,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
       >
         <PageComponent>
           <div className="grid grid-cols-3 items-center py-2 md:py-2">
-            <nav className="justify-self-start font-serif text-base font-medium text-primary min-[330px]:text-lg min-[370px]:text-xl md:text-2xl">
+            <nav className="justify-self-start font-serif font-medium text-primary text-sm min-[330px]:text-base min-[370px]:text-lg md:text-xl">
               {title}
             </nav>
             <nav className="h-8 justify-self-center">
