@@ -245,6 +245,6 @@ export const getStaticProps = async (): Promise<GetStatitPropsReturnedType> => {
       categories,
       menu,
     },
-    revalidate: 43200, // in seconds
+    revalidate: 2160000, // in seconds
   };
 };
