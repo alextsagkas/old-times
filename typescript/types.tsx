@@ -1,4 +1,4 @@
-import {
+import type {
   MenuCategoryInterface,
   MenuInterface,
   MenuItemInterface,
@@ -80,5 +80,5 @@ export type GetStatitPropsReturnedType = {
     categories: MenuCategoryInterface[];
     menu: MenuInterface
   };
-  revalidate: number;
+  // revalidate: number;
 };
