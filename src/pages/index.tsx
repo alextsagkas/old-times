@@ -21,106 +21,17 @@ import type {
 } from "../../typescript/interfaces";
 
 const Home: NextPage<HomeProps> = () => {
-  const IntroRef = createRef<HTMLDivElement>();
-  const BruschettaRef = createRef<HTMLDivElement>();
-  const GreekDipsRef = createRef<HTMLDivElement>();
-  const AppetizersRef = createRef<HTMLDivElement>();
-  const SaladsRef = createRef<HTMLDivElement>();
-  const SeaFoodRef = createRef<HTMLDivElement>();
-  const GrilledRef = createRef<HTMLDivElement>();
-  const PizzaRef = createRef<HTMLDivElement>();
-  const PastaRef = createRef<HTMLDivElement>();
-  const TraditionalRef = createRef<HTMLDivElement>();
-  const IceCreamMilkShakeRef = createRef<HTMLDivElement>();
-  const FruitsRef = createRef<HTMLDivElement>();
-  const DessertsRef = createRef<HTMLDivElement>();
-  const SoftDrinksRef = createRef<HTMLDivElement>();
-  const BeersRef = createRef<HTMLDivElement>();
-  const SpiritsRef = createRef<HTMLDivElement>();
-  const CoffeesRef = createRef<HTMLDivElement>();
-  const WineListRef = createRef<HTMLDivElement>();
-  const CocktailsRef = createRef<HTMLDivElement>();
-  const LiquersRef = createRef<HTMLDivElement>();
+  const refs: RefsItemInterface[] = [];
 
-  const refs = [
-    { ref: IntroRef, title: "Menu" },
-    {
-      ref: BruschettaRef,
-      title: (categories[0] as MenuCategoryInterface).category,
-    },
-    {
-      ref: GreekDipsRef,
-      title: (categories[1] as MenuCategoryInterface).category,
-    },
-    {
-      ref: AppetizersRef,
-      title: (categories[2] as MenuCategoryInterface).category,
-    },
-    {
-      ref: SaladsRef,
-      title: (categories[3] as MenuCategoryInterface).category,
-    },
-    {
-      ref: SeaFoodRef,
-      title: (categories[4] as MenuCategoryInterface).category,
-    },
-    {
-      ref: GrilledRef,
-      title: (categories[5] as MenuCategoryInterface).category,
-    },
-    {
-      ref: PizzaRef,
-      title: (categories[6] as MenuCategoryInterface).category,
-    },
-    {
-      ref: PastaRef,
-      title: (categories[7] as MenuCategoryInterface).category,
-    },
-    {
-      ref: TraditionalRef,
-      title: (categories[8] as MenuCategoryInterface).category,
-    },
-    {
-      ref: IceCreamMilkShakeRef,
-      title: (categories[9] as MenuCategoryInterface).category,
-    },
-    {
-      ref: FruitsRef,
-      title: (categories[10] as MenuCategoryInterface).category,
-    },
-    {
-      ref: DessertsRef,
-      title: (categories[11] as MenuCategoryInterface).category,
-    },
-    {
-      ref: SoftDrinksRef,
-      title: (categories[12] as MenuCategoryInterface).category,
-    },
-    {
-      ref: BeersRef,
-      title: (categories[13] as MenuCategoryInterface).category,
-    },
-    {
-      ref: SpiritsRef,
-      title: (categories[14] as MenuCategoryInterface).category,
-    },
-    {
-      ref: CoffeesRef,
-      title: (categories[15] as MenuCategoryInterface).category,
-    },
-    {
-      ref: WineListRef,
-      title: (categories[16] as MenuCategoryInterface).category,
-    },
-    {
-      ref: CocktailsRef,
-      title: (categories[17] as MenuCategoryInterface).category,
-    },
-    {
-      ref: LiquersRef,
-      title: (categories[18] as MenuCategoryInterface).category,
-    },
-  ];
+  const IntroRef = createRef<HTMLDivElement>();
+  refs.push({ ref: IntroRef, title: "Menu" });
+
+  categories.map((category) => {
+    refs.push({
+      ref: createRef<HTMLDivElement>(),
+      title: category.category,
+    });
+  });
 
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const handleScroll = () => {
