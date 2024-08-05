@@ -66,7 +66,51 @@ const Home: NextPage<HomeProps> = () => {
           />
           <Separator />
           {categories.map((category, index) => {
-            if (category.position <= 12) {
+            if (category.position <= 9) {
+              return (
+                <MenuItem
+                  key={category.id}
+                  menuItem={categories[index] as MenuCategoryInterface}
+                  ref={(refs[index + 1] as RefsItemInterface).ref}
+                />
+              );
+            }
+          })}
+          <Separator />
+          {categories.map((category, index) => {
+            if (
+              category.position > 9 &&
+              category.position <= 12 &&
+              index <= refs.length
+            ) {
+              return (
+                <MenuItem
+                  key={category.id}
+                  menuItem={categories[index] as MenuCategoryInterface}
+                  ref={(refs[index + 1] as RefsItemInterface).ref}
+                />
+              );
+            }
+          })}
+          <Separator />
+          {categories.map((category, index) => {
+            if (
+              category.position > 12 &&
+              category.position <= 26 &&
+              index <= refs.length
+            ) {
+              return (
+                <MenuItem
+                  key={category.id}
+                  menuItem={categories[index] as MenuCategoryInterface}
+                  ref={(refs[index + 1] as RefsItemInterface).ref}
+                />
+              );
+            }
+          })}
+          <Separator />
+          {categories.map((category, index) => {
+            if (category.position > 26 && index <= refs.length) {
               return (
                 <MenuItem
                   key={category.id}
@@ -83,19 +127,6 @@ const Home: NextPage<HomeProps> = () => {
               english: menu.foodDetailsEnglish,
             }}
           />
-          <Separator />
-          {categories.map((category, index) => {
-            if (category.position > 12 && index <= refs.length) {
-              return (
-                <MenuItem
-                  key={category.id}
-                  menuItem={categories[index] as MenuCategoryInterface}
-                  ref={(refs[index + 1] as RefsItemInterface).ref}
-                />
-              );
-            }
-          })}
-          <Separator />
           <Infos
             foodInfos={{
               greek: menu.foodInfosGreek,
