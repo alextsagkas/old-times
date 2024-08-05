@@ -604,39 +604,10 @@ export const categories = [
   },
 
   {
-    id: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
-    category: "Fruits",
-    fresh: 2,
-    position: 9,
-    MenuItems: [
-      {
-        id: "a8d72f6d-ec63-4162-a820-4a9029171788",
-        name: "Melon",
-        subCategory: "",
-        description: "",
-        fresh: 0,
-        price: 5,
-        menuCategoryId: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
-        subItems: [],
-      },
-      {
-        id: "0438778b-6507-432f-91cc-10b9735ed840",
-        name: "Fruit salad",
-        subCategory: "",
-        description: "",
-        fresh: 0,
-        price: 7.5,
-        menuCategoryId: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
-        subItems: [],
-      },
-    ],
-  },
-
-  {
     id: "dbb4521e-a944-4e05-934b-a9fee4321c51",
     category: "Traditional Greek dishes",
     fresh: 0,
-    position: 10,
+    position: 9,
     MenuItems: [
       {
         id: "dc77cf17-ef89-424f-a5c5-cd085de04d35",
@@ -709,6 +680,35 @@ export const categories = [
         fresh: 0,
         price: 13.9,
         menuCategoryId: "dbb4521e-a944-4e05-934b-a9fee4321c51",
+        subItems: [],
+      },
+    ],
+  },
+
+  {
+    id: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
+    category: "Fruits",
+    fresh: 2,
+    position: 10,
+    MenuItems: [
+      {
+        id: "a8d72f6d-ec63-4162-a820-4a9029171788",
+        name: "Melon",
+        subCategory: "",
+        description: "",
+        fresh: 0,
+        price: 5,
+        menuCategoryId: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
+        subItems: [],
+      },
+      {
+        id: "0438778b-6507-432f-91cc-10b9735ed840",
+        name: "Fruit salad",
+        subCategory: "",
+        description: "",
+        fresh: 0,
+        price: 7.5,
+        menuCategoryId: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
         subItems: [],
       },
     ],
