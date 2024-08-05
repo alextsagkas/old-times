@@ -47,10 +47,6 @@ const Home: NextPage<HomeProps> = () => {
     };
   }, [scrollPosition]);
 
-  categories.map((category, index) => {
-    console.log(index, category.category);
-  });
-
   return (
     <>
       <Head>
