@@ -105,7 +105,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         }`}
       >
         <PageComponent>
-          <div className="grid h-fit grid-cols-2 font-normal justify-items-start gap-y-5 py-4 font-serif text-xl">
+          <div className="grid h-fit grid-cols-3 font-normal justify-items-start gap-y-5 py-4 font-serif text-xl">
             {refs.map((ref) => {
               if (ref.title !== "Menu") {
                 return (
