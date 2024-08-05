@@ -2,7 +2,7 @@ import { createRef, useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { prisma } from "../server/db";
+import { categories, menu } from "../../data/backup";
 
 import Separator from "../components/Separator";
 import FoodDetails from "../components/FoodDetails";
@@ -13,18 +13,14 @@ import Introduction from "../components/Introduction";
 import MenuItem from "../components/MenuItem";
 import NavBar from "../components/NavBar";
 
-import type {
-  GetStatitPropsReturnedType,
-  HomeProps,
-} from "../../typescript/types";
+import type { HomeProps } from "../../typescript/types";
 
 import type {
   MenuCategoryInterface,
-  MenuInterface,
   RefsItemInterface,
 } from "../../typescript/interfaces";
 
-const Home: NextPage<HomeProps> = ({ categories, menu }) => {
+const Home: NextPage<HomeProps> = () => {
   const IntroRef = createRef<HTMLDivElement>();
   const BruschettaRef = createRef<HTMLDivElement>();
   const GreekDipsRef = createRef<HTMLDivElement>();
@@ -219,32 +215,3 @@ const Home: NextPage<HomeProps> = ({ categories, menu }) => {
 };
 
 export default Home;
-
-export const getStaticProps = async (): Promise<GetStatitPropsReturnedType> => {
-  const categories = await prisma.menuCategory.findMany({
-    include: {
-      MenuItems: {
-        include: {
-          subItems: true,
-        },
-      },
-    },
-    orderBy: {
-      position: "asc",
-    },
-  });
-
-  const menu = (await prisma.menu.findFirst({
-    where: {
-      id: "5133110a-4b5c-4208-bf6f-dd7c6a505076",
-    },
-  })) as MenuInterface;
-
-  return {
-    props: {
-      categories,
-      menu,
-    },
-    // revalidate: 2160000, // in seconds
-  };
-};
