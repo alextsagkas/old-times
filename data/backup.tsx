@@ -1,3 +1,44 @@
+import type { MenuInterface } from "../typescript/interfaces";
+
+export const menu: MenuInterface = {
+  title: "OLD TIMES",
+  subtitle: "Pizza - Pasta",
+  road: "Spirou Arvanitaki 7",
+  telephone: "+30 26610 47558",
+  facebook: "https://www.facebook.com/profile.php?id=100069351465975",
+  tripadvisor:
+    "https://www.tripadvisor.com/Restaurant_Review-g662629-d8078833-Reviews-Old_Times-Corfu_Town_Corfu_Ionian_Islands.html",
+  description:
+    "Inspired by the Mediterranean - Italian cuisine and culture, our dishes are prepared with pure ingredients, extra virgin olive oil of Corfu and a lot of love, for you to enjoy at any time of the day.",
+  foodDetailsGreek: [
+    "Για την παρασκευή των μαγειρευτών και τις σαλάτες χρησιμοποιούμε ελαιόλαδο.",
+    "Η φέτα είναι Π.Ο.Π.",
+    "Για το τηγάνισμα χρησιμοποιούμε σπορέλαιο.",
+  ],
+  foodDetailsEnglish: [
+    "For cooking and salads we use olive oil.",
+    "The feta cheese we use is PDO.",
+    "For frying, we use seed oil.",
+  ],
+  foodInfosGreek: [
+    "Κατεψυγμένα προϊόντα: τυροπιτάκια, σπανακοπιτάκια, γαρίδες, μύδια, καλαμαράκια, βακαλάος, φιλέτο, σνίτσελ.",
+  ],
+  foodInfosEnglish: [
+    "Frozen products: cheese pies, spinach pies, shrimp, mussels, squids, cod fillet, schnitzel.",
+  ],
+  restaurantInfosGreek: [
+    "Το κατάστημα υποχρεούται να διαθέτει έντυπα δελτία σε ειδική θήκη δίπλα στην έξοδο για τη διατύπωση οποιασδήποτε διαμαρτυρίας.",
+  ],
+  restaurantInfosEnglish: [
+    "The restaurant is compelled to allocate printed bulletins in a special place next to the exit fot the formulation of any protest.",
+  ],
+  footnote: [
+    "Manager: Alexandros Arathymos",
+    "Prices include VAT",
+    "Consumer is not obliged to pay if the notice of payment has not been received",
+  ],
+};
+
 export const categories = [
   {
     id: "6103f2d5-ad84-4f9e-80f3-e1f9d36d3278",
