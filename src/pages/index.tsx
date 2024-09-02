@@ -109,7 +109,7 @@ const Home: NextPage<HomeProps> = () => {
             }
           })}
           <Separator />
-          {categories.map((category, index) => {
+          {/* {categories.map((category, index) => {
             if (
               category.position > 12 &&
               category.position <= 26 &&
@@ -135,8 +135,8 @@ const Home: NextPage<HomeProps> = () => {
                 />
               );
             }
-          })}
-          <Separator />
+          })} */}
+          {/* <Separator /> */}
           <FoodDetails
             foodDetails={{
               greek: menu.foodDetailsGreek,
