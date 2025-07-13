@@ -66,7 +66,7 @@ const Home: NextPage<HomeProps> = () => {
           />
           <Separator />
           {categories.map((category, index) => {
-            if (category.position <= 1) {
+            if (category.position <= 4) {
               return (
                 <MenuItem
                   key={category.id}
@@ -79,7 +79,7 @@ const Home: NextPage<HomeProps> = () => {
           <Separator />
           {categories.map((category, index) => {
             if (
-              category.position > 1 &&
+              category.position > 4 &&
               category.position <= 9 &&
               index <= refs.length
             ) {
