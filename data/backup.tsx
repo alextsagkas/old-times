@@ -1,4 +1,4 @@
-import type { MenuInterface } from "../typescript/interfaces";
+import type { MenuInterface, MenuCategoryInterface } from "../typescript/interfaces";
 
 export const menu: MenuInterface = {
   title: "OLD TIMES",
@@ -34,224 +34,212 @@ export const menu: MenuInterface = {
   ],
   footnote: [
     "Manager: Alexandros Arathymos",
-    "Prices include VAT",
+    "Prices include waiter's fee, municipal tax and VAT",
     "Consumer is not obliged to pay if the notice of payment has not been received",
   ],
 };
 
-export const categories = [
-  // {
-  //   id: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //   category: "Brunch",
-  //   fresh: 0,
-  //   position: 1,
-  //   MenuItems: [
-  //     {
-  //       id: "7b97cf77-3023-4df7-b02b-67b2ca90c4e6",
-  //       name: "Toast",
-  //       subCategory: "",
-  //       description: "Ham and cheese toast served with crisps",
-  //       fresh: 0,
-  //       price: 3.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "42d531ca-0028-40d5-b984-6b724c819592",
-  //       name: "Omelette",
-  //       subCategory: "",
-  //       description: "With ham, cheese and toasted bread",
-  //       fresh: 0,
-  //       price: 9.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "960be90a-4811-4dec-99d4-004a3cd34720",
-  //       name: "Omelette with vegetables",
-  //       subCategory: "",
-  //       description: "Tomato, onion and pepper",
-  //       fresh: 1,
-  //       price: 9.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "e40cdb19-ce96-44ab-ac95-56b6b4301310",
-  //       name: "Eggs with bacon",
-  //       subCategory: "",
-  //       description: "Fried eggs with roasted bacon and toasted bread",
-  //       fresh: 0,
-  //       price: 9.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "1977c3ce-bbc8-4025-8f40-1465b5f7105a",
-  //       name: "Eggs old times",
-  //       subCategory: "",
-  //       description:
-  //         "With toasted multi-grain bread, fresh rocket and smoked salmon",
-  //       fresh: 0,
-  //       price: 14.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "1961ace5-8c6e-4e98-897a-980a498ac608",
-  //       name: "Club sandwitch",
-  //       subCategory: "",
-  //       description:
-  //         "With smoked chicken, cheddar cheese, pepper, tomato, green salad and mustard sauce",
-  //       fresh: 0,
-  //       price: 11.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "540d50b7-0116-404e-8544-3d88d532487b",
-  //       name: "Burger",
-  //       subCategory: "",
-  //       description:
-  //         "With black angus beef, goat cheese, cucumber, tomato, lettuce, Jack Daniel's sauce and French fries on the side",
-  //       fresh: 0,
-  //       price: 12.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "a834ca64-4296-40da-ae34-9cce64f0d535",
-  //       name: "Burger vegetarian",
-  //       subCategory: "",
-  //       description:
-  //         "Fried zucchini patty, parmesan cheese, lettuce, tomato, cucumber, caramelized onion and French fries on the side",
-  //       fresh: 1,
-  //       price: 11.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "03563944-9bc6-486c-8da0-7ebecb9af188",
-  //       name: "English pancake",
-  //       subCategory: "",
-  //       description: "Eggs, bacon, cheese and philadelphia cream",
-  //       fresh: 0,
-  //       price: 10.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "1a0f2f9c-096b-4572-8f8c-18faaf8b8295",
-  //       name: "Pancake with fresh fruits",
-  //       subCategory: "",
-  //       description: "Fruits, yoghurt, honey and cinnamon",
-  //       fresh: 1,
-  //       price: 9.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "cfc8c078-01df-43c7-877f-fafd8c2601ba",
-  //       name: "Nutella pancake",
-  //       subCategory: "",
-  //       description: "nutella, banana and biscuit",
-  //       fresh: 1,
-  //       price: 9.9,
-  //       menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "fa087c05-538d-4252-85dc-d5341e7970d0",
-  //       name: "Baklava",
-  //       subCategory: "",
-  //       description:
-  //         "layered pastry filled with chopped nuts and sweetened syrup",
-  //       fresh: 1,
-  //       price: 7,
-  //       menuCategoryId: "07c48deb-3785-4abc-b010-a654f23a740f",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "a8d878a0-0b08-4b42-9a69-4f9a240e5325",
-  //       name: "Orange pie",
-  //       subCategory: "",
-  //       description: "",
-  //       fresh: 1,
-  //       price: 7,
-  //       menuCategoryId: "07c48deb-3785-4abc-b010-a654f23a740f",
-  //       subItems: [],
-  //     },
-  //     {
-  //       id: "a77d4ca9-3960-4ed8-9b93-7f2c8d7e8ae2",
-  //       name: "Apple pie",
-  //       subCategory: "",
-  //       description: "",
-  //       fresh: 1,
-  //       price: 7,
-  //       menuCategoryId: "07c48deb-3785-4abc-b010-a654f23a740f",
-  //       subItems: [
-  //         {
-  //           id: "440b6141-934f-4fe5-9d53-4f2bbb673736",
-  //           name: "ice cream ball",
-  //           description: "",
-  //           fresh: 0,
-  //           price: 2.5,
-  //           menuItemId: "201bdc72-fbd1-45a6-a146-a59705148044",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       id: "9726157a-ebbd-4718-9cc3-e27d32019a4f",
-  //       name: "Yoghurt",
-  //       subCategory: "",
-  //       description:
-  //         "create your own yoghurt salad with the following ingredients:",
-  //       fresh: 1,
-  //       price: 5,
-  //       menuCategoryId: "07c48deb-3785-4abc-b010-a654f23a740f",
-  //       subItems: [
-  //         {
-  //           id: "fa3dac8e-b2ff-46fb-bf61-a3eb006d5bb9",
-  //           name: "honey and walnuts",
-  //           description: "",
-  //           fresh: 0,
-  //           price: 2,
-  //           menuItemId: "201bdc72-fbd1-45a6-a146-a59705148044",
-  //         },
-  //         {
-  //           id: "60c44814-09f3-4f26-8804-8f212af7f6f9",
-  //           name: "muesly and walnuts",
-  //           description: "",
-  //           fresh: 0,
-  //           price: 2,
-  //           menuItemId: "201bdc72-fbd1-45a6-a146-a59705148044",
-  //         },
-  //         {
-  //           id: "f89d16e5-1245-4f42-ac31-963ebdb200b6",
-  //           name: "fresh fruit",
-  //           description: "",
-  //           fresh: 0,
-  //           price: 2,
-  //           menuItemId: "201bdc72-fbd1-45a6-a146-a59705148044",
-  //         },
-  //         {
-  //           id: "b2f28527-828e-4f8b-bbbc-2673b4ce9443",
-  //           name: "ice cream ball",
-  //           description: "",
-  //           fresh: 0,
-  //           price: 2.5,
-  //           menuItemId: "201bdc72-fbd1-45a6-a146-a59705148044",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+export const categories: MenuCategoryInterface[] = [
+  {
+    id: "d6753654-c835-40c1-9bb9-47476471b10a",
+    category: "Brunch",
+    fresh: 0,
+    position: 1,
+    MenuItems: [
+      {
+        id: "7b97cf77-3023-4df7-b02b-67b2ca90c4e6",
+        name: "Toast",
+        subCategory: "",
+        description: "ham and cheese toast served with crisps",
+        fresh: 0,
+        price: 3.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "1a0f2f9c-096b-4572-8f8c-18faaf8b8295",
+        name: "Pancake with fruits",
+        subCategory: "",
+        description: "cream yoghurt, fruits, honey and cinnamon",
+        fresh: 1,
+        price: 10.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "cfc8c078-01df-43c7-877f-fafd8c2601ba",
+        name: "Pancake nutella",
+        subCategory: "",
+        description: "nutella, banana and biscuit",
+        fresh: 1,
+        price: 10.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "03563944-9bc6-486c-8da0-7ebecb9af188",
+        name: "English pancake",
+        subCategory: "",
+        description: "eggs, bacon and cream philadelphia",
+        fresh: 0,
+        price: 10.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "9726157a-ebbd-4718-9cc3-e27d32019a4f",
+        name: "Scrambled eggs with avocado",
+        subCategory: "",
+        description:
+          "scrambled eggs, with toasted bread, avocado and cream cheese",
+        fresh: 1,
+        price: 10.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: []
+      },
+      {
+        id: "42d531ca-0028-40d5-b984-6b724c819592",
+        name: "Omelette",
+        subCategory: "",
+        description: "with ham, cheese and toasted bread",
+        fresh: 0,
+        price: 10.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "960be90a-4811-4dec-99d4-004a3cd34720",
+        name: "Omelette with vegetables",
+        subCategory: "",
+        description: "tomato, onion and pepper",
+        fresh: 2,
+        price: 10.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "e40cdb19-ce96-44ab-ac95-56b6b4301310",
+        name: "Eggs with bacon",
+        subCategory: "",
+        description: "fried eggs with roasted bacon and toasted bread",
+        fresh: 0,
+        price: 10.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "1977c3ce-bbc8-4025-8f40-1465b5f7105a",
+        name: "Eggs old times",
+        subCategory: "",
+        description:
+          "with toasted multi-grain bread, fresh rocket and smoked salmon",
+        fresh: 0,
+        price: 14.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+      {
+        id: "1961ace5-8c6e-4e98-897a-980a498ac608",
+        name: "Club sandwitch",
+        subCategory: "",
+        description:
+          "with smoked chicken, cheddar cheese, pepper, tomato, green salad and mustard sauce",
+        fresh: 0,
+        price: 15.9,
+        menuCategoryId: "d6753654-c835-40c1-9bb9-47476471b10a",
+        subItems: [],
+      },
+    ],
+  },
+
+  {
+    id: "cba58cee-50e3-4b05-9b47-b6b784d13b3a",
+    category: "Yoghurt Bowls",
+    shortCategory: "Yoghurt",
+    fresh: 0,
+    position: 2,
+    MenuItems: [
+      {
+        id: "6c81ecd2-8a21-429e-b603-f3967a556feb",
+        name: "Crunchy",
+        subCategory: "",
+        description:
+          "greek strained yoghurt, homemade granola, banana, honey",
+        fresh: 1,
+        price: 9,
+        menuCategoryId: "cba58cee-50e3-4b05-9b47-b6b784d13b3a",
+        subItems: []
+      },
+      {
+        id: "e70fe3dc-d5c2-4cc5-9e14-5e99fca99dbf",
+        name: "Greek diet",
+        subCategory: "",
+        description:
+          "greek strained yoghurt, honey, walnuts",
+        fresh: 1,
+        price: 9,
+        menuCategoryId: "cba58cee-50e3-4b05-9b47-b6b784d13b3a",
+        subItems: []
+      },
+      {
+        id: "e70fe3dc-d5c2-4cc5-9e14-5e99fca99dbf",
+        name: "Frutie",
+        subCategory: "",
+        description:
+          "fresh fruits, honey, coconut flakes, chia seeds",
+        fresh: 1,
+        price: 9,
+        menuCategoryId: "cba58cee-50e3-4b05-9b47-b6b784d13b3a",
+        subItems: []
+      },
+      {
+        id: "fa087c05-538d-4252-85dc-d5341e7970d0",
+        name: "Baklava",
+        subCategory: "",
+        description:
+          "layered pastry filled with chopped nuts and sweetened syrup",
+        fresh: 1,
+        price: 7,
+        menuCategoryId: "cba58cee-50e3-4b05-9b47-b6b784d13b3a",
+        subItems: []
+      },
+      {
+        id: "9726157a-ebbd-4718-9cc3-e27d32019a4f",
+        name: "Yoghurt",
+        subCategory: "",
+        description: "",
+        fresh: 1,
+        price: 5,
+        menuCategoryId: "cba58cee-50e3-4b05-9b47-b6b784d13b3a",
+        subItems: []
+      },
+      {
+        id: "133b5f7f-f08c-4c72-b8b2-1ead136146d1",
+        name: "Apple pie",
+        subCategory: "",
+        description: "",
+        fresh: 0,
+        price: 7,
+        menuCategoryId: "07c48deb-3785-4abc-b010-a654f23a740f",
+        subItems: [
+          {
+            id: "a5efb908-461e-4ab9-8c58-177162537496",
+            name: "ice cream",
+            description: "",
+            fresh: 0,
+            price: 3,
+            menuItemId: "133b5f7f-f08c-4c72-b8b2-1ead136146d1",
+          },
+        ]
+      },
+    ],
+  },
 
   {
     id: "6103f2d5-ad84-4f9e-80f3-e1f9d36d3278",
     category: "Bruschetta",
     fresh: 0,
-    position: 1,
+    position: 3,
     MenuItems: [
       {
         id: "c0be2306-df41-4c0c-8076-5894662dab37",
@@ -268,7 +256,7 @@ export const categories = [
         name: "Pita bread",
         subCategory: "",
         description:
-          "with extra virgin olive oil, flower of salt and smoked paprika",
+          "with extra virgin olive oil, oregano, flower of salt and smoked paprika",
         fresh: 2,
         price: 2.9,
         menuCategoryId: "6103f2d5-ad84-4f9e-80f3-e1f9d36d3278",
@@ -309,9 +297,9 @@ export const categories = [
 
   {
     id: "874dfa27-7bbe-4391-8ab1-6c4f498255a7",
-    category: "Greek dips",
+    category: "Greek Dips",
     fresh: 0,
-    position: 2,
+    position: 4,
     MenuItems: [
       {
         id: "b34c880a-4344-45e0-bfea-032ec8eb89d9",
@@ -359,7 +347,7 @@ export const categories = [
       },
       {
         id: "bfa362c7-bc60-468c-852f-aafa369e0bd8",
-        name: "Olives",
+        name: "Olives Bio",
         subCategory: "",
         description: "",
         fresh: 2,
@@ -405,7 +393,7 @@ export const categories = [
     id: "1f6af39d-679a-4e09-b710-1976ebf9443d",
     category: "Salads",
     fresh: 0,
-    position: 3,
+    position: 5,
     MenuItems: [
       {
         id: "e0ad077b-fbd2-43f8-ad30-a5cbf365650e",
@@ -414,20 +402,20 @@ export const categories = [
         description:
           "pieces of tomatoes, cucumbers, onion, pepper slices, feta cheese, black olives dressed with olive oil, caper and oregano",
         fresh: 1,
-        price: 12.9,
+        price: 13.9,
         menuCategoryId: "1f6af39d-679a-4e09-b710-1976ebf9443d",
         subItems: [],
       },
-      {
-        id: "7ec26ca1-d24d-4627-977e-836af484dc4a",
-        name: "Octopus salad",
-        subCategory: "",
-        description: "Tender octopus, sea greens, crisp lettuce and cherry tomatoes, dressed with olive oil",
-        fresh: 1,
-        price: 18.9,
-        menuCategoryId: "1f6af39d-679a-4e09-b710-1976ebf9443d",
-        subItems: [],
-      },
+      // {
+      //   id: "7ec26ca1-d24d-4627-977e-836af484dc4a",
+      //   name: "Octopus salad",
+      //   subCategory: "",
+      //   description: "Tender octopus, sea greens, crisp lettuce and cherry tomatoes, dressed with olive oil",
+      //   fresh: 1,
+      //   price: 18.9,
+      //   menuCategoryId: "1f6af39d-679a-4e09-b710-1976ebf9443d",
+      //   subItems: [],
+      // },
       {
         id: "4e11cf91-3eeb-4c25-b299-68cd2ffb4267",
         name: "Parmesan-rocket salad",
@@ -456,18 +444,18 @@ export const categories = [
         description:
           "mixed green salad, cherry tomatoes, smoked chicken, parmesan cheese, croutons and Caesar dressing",
         fresh: 0,
-        price: 12.9,
+        price: 13.9,
         menuCategoryId: "1f6af39d-679a-4e09-b710-1976ebf9443d",
         subItems: [],
       },
       {
         id: "c5dc3bcb-2cf9-44ae-ab66-d40b4b59a283",
-        name: "Old Times nouboulo",
+        name: "Old Times",
         subCategory: "",
         description:
-          "mixed green salad, figs flavoured with ouzo, kumquat, Corfiot nouboulo, cheese and citrus vinaigrette",
+          "mixed green salad, figs flavoured with ouzo, kumquat, cheese and citrus vinaigrette",
         fresh: 1,
-        price: 12.9,
+        price: 14.9,
         menuCategoryId: "1f6af39d-679a-4e09-b710-1976ebf9443d",
         subItems: [],
       },
@@ -478,7 +466,7 @@ export const categories = [
     id: "33b0098d-2263-48b1-bb4d-b265f28f9d68",
     category: "Appetizers",
     fresh: 0,
-    position: 4,
+    position: 6,
     MenuItems: [
       {
         id: "e397484c-8003-48e3-b747-a0c7a0c6476b",
@@ -523,7 +511,7 @@ export const categories = [
       },
       {
         id: "7a9a7870-cd8f-4b30-8cf5-ae6e54702697",
-        name: "Spinach pie",
+        name: "Spanakopita",
         subCategory: "",
         description: "with dill and fresh spring onions",
         fresh: 1,
@@ -570,7 +558,7 @@ export const categories = [
     id: "5e73f989-cb2f-482d-95b8-8299d81b9c35",
     category: "Pizza",
     fresh: 0,
-    position: 5,
+    position: 7,
     MenuItems: [
       {
         id: "318b2f6e-580d-462e-832e-fde1df57b3ca",
@@ -578,7 +566,7 @@ export const categories = [
         subCategory: "",
         description: "fresh tomato, mozzarella, rocket salad and prosciutto",
         fresh: 0,
-        price: 17.9,
+        price: 18.9,
         menuCategoryId: "5e73f989-cb2f-482d-95b8-8299d81b9c35",
         subItems: [],
       },
@@ -589,7 +577,7 @@ export const categories = [
         description:
           "fresh tomato, pepper, onion, feta cheese, olives and fresh oregano",
         fresh: 1,
-        price: 17.9,
+        price: 18.9,
         menuCategoryId: "5e73f989-cb2f-482d-95b8-8299d81b9c35",
         subItems: [],
       },
@@ -599,7 +587,7 @@ export const categories = [
         subCategory: "",
         description: "mozzarella, parmesan, gorgonzola and gouda",
         fresh: 1,
-        price: 16.9,
+        price: 18.9,
         menuCategoryId: "5e73f989-cb2f-482d-95b8-8299d81b9c35",
         subItems: [],
       },
@@ -610,7 +598,7 @@ export const categories = [
         description:
           "fresh tomato, mozzarella, ham, bacon, mushrooms and pepper",
         fresh: 0,
-        price: 17.9,
+        price: 18.9,
         menuCategoryId: "5e73f989-cb2f-482d-95b8-8299d81b9c35",
         subItems: [],
       },
@@ -621,11 +609,11 @@ export const categories = [
     id: "b5319848-3b20-49b1-b2b1-3ef2ffe54ec1",
     category: "Pasta",
     fresh: 0,
-    position: 6,
+    position: 8,
     MenuItems: [
       {
         id: "0d3c8e65-08af-42b0-b398-e780fad0be1e",
-        name: "Linguine Carbonara",
+        name: "Linguine carbonara",
         subCategory: "",
         description: "",
         fresh: 0,
@@ -635,7 +623,7 @@ export const categories = [
       },
       {
         id: "a8ef8e63-aec8-4db3-b2de-78d347f2fe0f",
-        name: "Linguine Alla Bolognese",
+        name: "Linguine alá bolognese",
         subCategory: "",
         description: "",
         fresh: 0,
@@ -643,16 +631,16 @@ export const categories = [
         menuCategoryId: "b5319848-3b20-49b1-b2b1-3ef2ffe54ec1",
         subItems: [],
       },
-      {
-        id: "c78a3b63-ef7d-4394-a265-fc50bbb4f8f6",
-        name: "4 Cheeses",
-        subCategory: "",
-        description: "mozzarella, parmesan, gorgonzola and gouda",
-        fresh: 1,
-        price: 13.9,
-        menuCategoryId: "b5319848-3b20-49b1-b2b1-3ef2ffe54ec1",
-        subItems: [],
-      },
+      // {
+      //   id: "c78a3b63-ef7d-4394-a265-fc50bbb4f8f6",
+      //   name: "4 Cheeses",
+      //   subCategory: "",
+      //   description: "mozzarella, parmesan, gorgonzola and gouda",
+      //   fresh: 1,
+      //   price: 13.9,
+      //   menuCategoryId: "b5319848-3b20-49b1-b2b1-3ef2ffe54ec1",
+      //   subItems: [],
+      // },
       {
         id: "a2174dd3-b79d-4ba3-9b0a-1e0a52b83418",
         name: "Shrimp linguini",
@@ -675,17 +663,17 @@ export const categories = [
         menuCategoryId: "b5319848-3b20-49b1-b2b1-3ef2ffe54ec1",
         subItems: [],
       },
-      {
-        id: "9d36912f-807b-4142-b296-314b8bff1f4b",
-        name: "Eggplant ravioli",
-        subCategory: "",
-        description:
-          "eggplant, cherry tomatoes, caramelized onion and tomato sauce",
-        fresh: 1,
-        price: 15.9,
-        menuCategoryId: "b5319848-3b20-49b1-b2b1-3ef2ffe54ec1",
-        subItems: [],
-      },
+      // {
+      //   id: "9d36912f-807b-4142-b296-314b8bff1f4b",
+      //   name: "Eggplant ravioli",
+      //   subCategory: "",
+      //   description:
+      //     "eggplant, cherry tomatoes, caramelized onion and tomato sauce",
+      //   fresh: 1,
+      //   price: 15.9,
+      //   menuCategoryId: "b5319848-3b20-49b1-b2b1-3ef2ffe54ec1",
+      //   subItems: [],
+      // },
       {
         id: "d1127c6f-abb9-4e43-a0f8-f9aceeb19240",
         name: "Spinach ravioli",
@@ -703,7 +691,7 @@ export const categories = [
     id: "238cb5ae-4289-4e49-86d8-df586320f993",
     category: "Grilled",
     fresh: 0,
-    position: 7,
+    position: 9,
     MenuItems: [
       {
         id: "153e619c-df93-4435-a18b-ed03fd645d88",
@@ -730,9 +718,10 @@ export const categories = [
 
   {
     id: "0e7c8807-c783-486d-aed7-c57c2a6a81a3",
-    category: "Seafood",
+    category: "Fresh Seafood",
+    shortCategory: "Seafood",
     fresh: 0,
-    position: 8,
+    position: 10,
     MenuItems: [
       {
         id: "1c9832de-7498-4153-ae11-91c9411e0296",
@@ -756,11 +745,11 @@ export const categories = [
       },
       {
         id: "08145bba-0840-4dc6-b3a0-c192f6aefe9a",
-        name: "Shrimps",
+        name: "Grilled shrimps",
         subCategory: "",
         description: "with garlic and cherry tomatoes",
         fresh: 0,
-        price: 18.9,
+        price: 19.9,
         menuCategoryId: "0e7c8807-c783-486d-aed7-c57c2a6a81a3",
         subItems: [],
       },
@@ -770,7 +759,7 @@ export const categories = [
         subCategory: "",
         description: "with fava and caramelized onions",
         fresh: 0,
-        price: 19.9,
+        price: 21.9,
         menuCategoryId: "0e7c8807-c783-486d-aed7-c57c2a6a81a3",
         subItems: [],
       },
@@ -778,7 +767,7 @@ export const categories = [
         id: "5ff6e74f-6326-445a-8f3d-e9ed771f5057",
         name: "Salmon fillet",
         subCategory: "",
-        description: "served with mix green salad",
+        description: "served with mashed potatoes",
         fresh: 0,
         price: 24,
         menuCategoryId: "0e7c8807-c783-486d-aed7-c57c2a6a81a3",
@@ -788,7 +777,7 @@ export const categories = [
         id: "5ff6e74f-6326-445a-8f3d-e9ed771f5057",
         name: "Grilled sardines",
         subCategory: "",
-        description: "served with mix green salad",
+        description: "served with green salad",
         fresh: 0,
         price: 16.9,
         menuCategoryId: "0e7c8807-c783-486d-aed7-c57c2a6a81a3",
@@ -810,7 +799,7 @@ export const categories = [
         name: "Dorado fillet",
         subCategory: "",
         description:
-          "served with smashed potatoes",
+          "served with mashed potatoes",
         fresh: 0,
         price: 27,
         menuCategoryId: "0e7c8807-c783-486d-aed7-c57c2a6a81a3",
@@ -821,7 +810,7 @@ export const categories = [
         name: "Seabass fillet",
         subCategory: "",
         description:
-          "served with smashed potatoes",
+          "served with mashed potatoes",
         fresh: 0,
         price: 27,
         menuCategoryId: "0e7c8807-c783-486d-aed7-c57c2a6a81a3",
@@ -843,9 +832,10 @@ export const categories = [
 
   {
     id: "dbb4521e-a944-4e05-934b-a9fee4321c51",
-    category: "Traditional Greek dishes",
+    category: "Traditional Greek Dishes",
+    shortCategory: "Traditional",
     fresh: 0,
-    position: 9,
+    position: 11,
     MenuItems: [
       {
         id: "dc77cf17-ef89-424f-a5c5-cd085de04d35",
@@ -865,7 +855,7 @@ export const categories = [
         description:
           "tender slices of beef with garlic, parsley, wine, vinegar, served with mashed potatoes",
         fresh: 0,
-        price: 16.9,
+        price: 19.9,
         menuCategoryId: "dbb4521e-a944-4e05-934b-a9fee4321c51",
         subItems: [],
       },
@@ -876,7 +866,7 @@ export const categories = [
         description:
           "layers of eggplant slices, chopped meat and béchamel sauce",
         fresh: 0,
-        price: 13.9,
+        price: 14.9,
         menuCategoryId: "dbb4521e-a944-4e05-934b-a9fee4321c51",
         subItems: [],
       },
@@ -927,7 +917,7 @@ export const categories = [
     id: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
     category: "Fruits",
     fresh: 2,
-    position: 10,
+    position: 12,
     MenuItems: [
       {
         id: "a8d72f6d-ec63-4162-a820-4a9029171788",
@@ -945,7 +935,7 @@ export const categories = [
         subCategory: "",
         description: "",
         fresh: 0,
-        price: 7.5,
+        price: 9,
         menuCategoryId: "17bb3bcc-b41a-4bb9-adb2-f0c30286530c",
         subItems: [],
       },
@@ -956,7 +946,7 @@ export const categories = [
     id: "07c48deb-3785-4abc-b010-a654f23a740f",
     category: "Desserts",
     fresh: 1,
-    position: 11,
+    position: 13,
     MenuItems: [
       {
         id: "6b2e65c4-d914-497f-b0be-7465f1198c3e",
@@ -1047,9 +1037,10 @@ export const categories = [
 
   {
     id: "c2291d03-4be4-4080-8a20-3184a528f54f",
-    category: "Ice cream and milkshake",
+    category: "Ice Cream and Milkshake",
+    shortCategory: "Ice Cream",
     fresh: 1,
-    position: 12,
+    position: 14,
     MenuItems: [
       {
         id: "cad6f860-2271-4fb1-b984-2461ff7ec682",
@@ -1063,7 +1054,7 @@ export const categories = [
       },
       {
         id: "79e8472e-d424-4346-82d8-a302f01a4077",
-        name: "Tiramisu",
+        name: "Dubai chocolate",
         subCategory: "",
         description: "",
         fresh: 0,

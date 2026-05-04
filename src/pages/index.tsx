@@ -5,9 +5,9 @@ import Head from "next/head";
 import { categories, menu } from "../../data/backup";
 
 import Separator from "../components/Separator";
-import FoodDetails from "../components/FoodDetails";
+// import FoodDetails from "../components/FoodDetails";
 import Footnote from "../components/Footnote";
-import Infos from "../components/Infos";
+// import Infos from "../components/Infos";
 import InfosFootnote from "../components/InfosFootnote";
 import Introduction from "../components/Introduction";
 import MenuItem from "../components/MenuItem";
@@ -29,7 +29,7 @@ const Home: NextPage<HomeProps> = () => {
   categories.map((category) => {
     refs.push({
       ref: createRef<HTMLDivElement>(),
-      title: category.category,
+      title: category.shortCategory || category.category,
     });
   });
 
@@ -66,7 +66,7 @@ const Home: NextPage<HomeProps> = () => {
           />
           <Separator />
           {categories.map((category, index) => {
-            if (category.position <= 4) {
+            if (category.position <= 2) {
               return (
                 <MenuItem
                   key={category.id}
@@ -79,8 +79,8 @@ const Home: NextPage<HomeProps> = () => {
           <Separator />
           {categories.map((category, index) => {
             if (
-              category.position > 4 &&
-              category.position <= 9 &&
+              category.position > 2 &&
+              category.position <= 6 &&
               index <= refs.length
             ) {
               return (
@@ -95,8 +95,8 @@ const Home: NextPage<HomeProps> = () => {
           <Separator />
           {categories.map((category, index) => {
             if (
-              category.position > 9 &&
-              category.position <= 12 &&
+              category.position > 6 &&
+              category.position <= 14 &&
               index <= refs.length
             ) {
               return (
@@ -137,7 +137,7 @@ const Home: NextPage<HomeProps> = () => {
             }
           })} */}
           {/* <Separator /> */}
-          <FoodDetails
+          {/*<FoodDetails
             foodDetails={{
               greek: menu.foodDetailsGreek,
               english: menu.foodDetailsEnglish,
@@ -153,7 +153,7 @@ const Home: NextPage<HomeProps> = () => {
               english: menu.restaurantInfosEnglish,
             }}
           />
-          <Separator />
+          <Separator />*/}
           <InfosFootnote footnote={menu.footnote} />
           <Separator />
           <Footnote

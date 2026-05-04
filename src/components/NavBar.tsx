@@ -10,16 +10,6 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
   const [title, setTitle] = useState<string>("Menu");
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  const refShorTitle = (title: string): string => {
-    if (title === "Traditional Greek dishes") {
-      return "Traditional";
-    } else if (title === "Ice cream and milkshake") {
-      return "Ice cream";
-    } else {
-      return title;
-    }
-  };
-
   useEffect(() => {
     refs.map((ref: RefsItemInterface) => {
       if (
@@ -27,7 +17,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
         ref.ref.current?.getBoundingClientRect().top < 10 &&
         !isVisible
       ) {
-        setTitle(refShorTitle(ref.title));
+        setTitle(ref.title);
       }
 
       if (isVisible) {
@@ -122,7 +112,7 @@ const NavBar = ({ children, refs, scrollPosition }: NavBarProps) => {
                       });
                     }}
                   >
-                    {refShorTitle(ref.title)}
+                    {ref.title}
                   </nav>
                 );
               }

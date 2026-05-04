@@ -43,6 +43,7 @@ export interface MenuSubItemInterface {
 export interface MenuCategoryInterface {
   id: string;
   category: string;
+  shortCategory?: string;
   fresh: number;
   position: number;
   MenuItems: MenuItemInterface[];
