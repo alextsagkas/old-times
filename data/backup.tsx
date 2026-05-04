@@ -1476,7 +1476,7 @@ export const categories = [
   //     },
   //     {
   //       id: "0a1d613d-408e-4e5a-b938-acd1f0522f26",
-  //       name: "Frappé with Ice Cream ",
+  //       name: "Frappé with Ice Cream",
   //       subCategory: "",
   //       description: "",
   //       fresh: 0,
@@ -1535,7 +1535,7 @@ export const categories = [
   //     },
   //     {
   //       id: "5528ec9d-c8a5-47a4-8990-77d4e53a2c3d",
-  //       name: "Papaioannou ",
+  //       name: "Papaioannou",
   //       subCategory: "Blanc Sec",
   //       description: "Chardonnay",
   //       fresh: 0,
@@ -2706,7 +2706,7 @@ export const categories = [
   //       subCategory: "",
   //       description:
 
-  //         "Vodka, peach schnapps, Grenadine, orange jouce and cranberry juice",
+  //         "Vodka, peach schnapps, Grenadine, orange juice and cranberry juice",
   //       fresh: 0,
   //       price: 12,
   //       menuCategoryId: "e4429643-bcfa-47ab-8f0f-5290d5b9e3a9",
