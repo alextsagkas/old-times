@@ -7,7 +7,7 @@ import type {
 
 export type HomeProps = {
   categories: MenuCategoryInterface[];
-  menu: MenuInterface
+  menu: MenuInterface;
 };
 
 export type MenuProps = {
@@ -78,7 +78,17 @@ export type NavBarProps = {
 export type GetStatitPropsReturnedType = {
   props: {
     categories: MenuCategoryInterface[];
-    menu: MenuInterface
+    menu: MenuInterface;
   };
   // revalidate: number;
+};
+
+export type UnderConstructionProps = {
+  title: string;
+  subtitle: string;
+  road: string;
+  telephone: string;
+  facebookURL: string;
+  tripadvisorURL: string;
+  mapURL: string;
 };
